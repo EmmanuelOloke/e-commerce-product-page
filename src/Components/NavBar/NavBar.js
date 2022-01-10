@@ -21,7 +21,6 @@ function NavBar() {
                         <li>Contact</li>
                     </ul>
                 </div>
-            
 
                 <div className="navbar-right">
                     <div className="navbar">
