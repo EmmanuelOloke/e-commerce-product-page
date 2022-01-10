@@ -1,0 +1,65 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 24em;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+}
+
+.navbar,
+img {
+    align-self: center;
+    justify-content: center;
+}
+
+ul,
+li {
+    list-style: none;
+    display: inline;
+    font-family: "Kumbh Sans";
+    margin: 0em 1em;
+    color: hsl(219, 9%, 45%);
+}
+
+li:hover {
+    cursor: pointer;
+    color: hsl(220, 13%, 13%);
+    padding-bottom: 2.6em;
+    border-bottom: 3px solid hsl(26, 100%, 55%);
+}
+
+.navbar-left {
+    display: flex;
+    padding: 1.9em 0em;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 2em;
+    padding: 1.9em 0em;
+}
+
+.avatar {
+    border-radius: 49px;
+}
+
+.avatar:hover {
+    border: 1px solid hsl(26, 100%, 55%);
+    cursor: pointer;
+}
+
+.disp {
+    display: flex;
+    flex-direction: column;
+}
+
+.colors {
+    color: hsl(26, 100%, 55%);
+    color: hsl(25, 100%, 94%);
+    color: hsl(220, 13%, 13%);
+    color: hsl(219, 9%, 45%);
+    color: hsl(220, 14%, 75%);
+    color: hsl(223, 64%, 98%);
+    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%);
+    /*- Black (with 75% opacity for lightbox background)*/
+}
