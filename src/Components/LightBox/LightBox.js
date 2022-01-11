@@ -31,7 +31,7 @@ function LightBox() {
 
     const price = (unit, qty) => {
         let totalPrice = "$" + unit * qty;
-        document.getElementById('total').innerHTML = totalPrice;
+        document.getElementById('total').innerHTML = totalPrice + ".00";
         return totalPrice;
     }
 
