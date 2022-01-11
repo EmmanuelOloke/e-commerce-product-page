@@ -47,11 +47,6 @@ li:hover {
     cursor: pointer;
 }
 
-.disp {
-    display: flex;
-    flex-direction: column;
-}
-
 .colors {
     color: hsl(26, 100%, 55%);
     color: hsl(25, 100%, 94%);

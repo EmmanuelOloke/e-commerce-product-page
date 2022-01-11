@@ -1,0 +1,32 @@
+.lightbox-container {
+    display: flex;
+    margin-top: 5em;
+    gap: 8em;
+}
+
+.lightbox-images {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.lightbox-main-image {
+    width: 25em;
+    border-radius: 10px;
+}
+
+.lightbox-thumbnails {
+    display: flex;
+    gap: 1em;
+    width: 25em;
+}
+
+.lightbox-thumbnails img {
+    width: 5.5em;
+    border-radius: 10px;
+}
+
+.lightbox-thumbnails img:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
