@@ -24,7 +24,14 @@ function LightBox() {
             </div>
 
             <div className="lightbox-txt">
-                <p>SNEAKER COMPANY</p>
+                <p className="lightbox-txt-title">SNEAKER COMPANY</p>
+                <p className="lightbox-txt-fall">Fall Limited Edition Sneakers</p>
+                <p className="lightbox-txt-desc">These low-profile sneakers are your perfect casual wear companion. 
+                Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+                <div className="flexItems">
+                    <span>$125.00</span> <span className="price-txt">50%</span>
+                </div>
+                
             </div>
             
         </div>
