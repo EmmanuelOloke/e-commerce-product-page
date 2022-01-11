@@ -103,6 +103,11 @@
     font-weight: bold;
 }
 
+.item-count img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
 button {
     border: none;
     box-shadow: 0 4px 8px 0 rgb(242, 140, 40);
