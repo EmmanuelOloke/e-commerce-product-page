@@ -44,6 +44,7 @@
     font-size: 0.8em;
     font-weight: bold;
     letter-spacing: 2px;
+    margin: 0;
 }
 
 .lightbox-txt-fall {
@@ -83,4 +84,40 @@
     font-weight: bold;
     color: hsl(220, 14%, 75%);
     text-decoration: line-through;
+}
+
+.action-section {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.item-count {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5em;
+    width: 7em;
+    background-color: hsl(223, 64%, 98%);
+    padding: 1em;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button {
+    border: none;
+}
+
+button img {
+    width: 1.1em;
+    margin-right: 1.5em;
+}
+
+.add-to-cart {
+    width: 20em;
+    background-color: hsl(26, 100%, 55%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 0.9em;
+    align-items: center;
 }

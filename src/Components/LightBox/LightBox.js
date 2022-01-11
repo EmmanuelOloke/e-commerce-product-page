@@ -7,6 +7,9 @@ import Product2Thumbnail from '../../images/image-product-2-thumbnail.jpg';
 import Product3Thumbnail from '../../images/image-product-3-thumbnail.jpg';
 // import Product4 from '../../images/image-product-4.jpg';
 import Product4Thumbnail from '../../images/image-product-4-thumbnail.jpg';
+import IconMinus from '../../images/icon-minus.svg';
+import IconPlus from '../../images/icon-plus.svg';
+import Cart from '../../images/icon-cart.svg';
 import './LightBox.css';
 
 function LightBox() {
@@ -32,6 +35,19 @@ function LightBox() {
                     <span className="price">$125.00</span> <span className="price-off">50%</span>
                 </div>
                 <p className="price-before">$250.00</p>
+
+                <div className="action-section">
+                    <div className="item-count">
+                        <img src={IconMinus} alt="remove product"/>
+                        0
+                        <img src={IconPlus} alt="add product"/>
+                    </div>
+
+                    <button className="add-to-cart">
+                        <img src={Cart} alt="cart icon" style={{color: 'red'}}/>
+                        Add to cart
+                    </button>
+                </div>
                 
             </div>
             
