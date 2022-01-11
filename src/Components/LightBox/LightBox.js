@@ -13,6 +13,19 @@ import Cart from '../../images/icon-cart.svg';
 import './LightBox.css';
 
 function LightBox() {
+    let qty = 0;
+    const addItem = () => {
+        qty++;
+        document.getElementById('qty').innerHTML = qty;
+    }
+
+    const remItem = () => {
+        if (qty > 0){
+            qty--;
+        }
+        document.getElementById('qty').innerHTML = qty;
+    }
+
     return (
         <div className="lightbox-container">
             <div className="lightbox-images">
@@ -36,11 +49,11 @@ function LightBox() {
                 </div>
                 <p className="price-before">$250.00</p>
 
-                <div className="action-section">
+                <div className="flexItems">
                     <div className="item-count">
-                        <img src={IconMinus} alt="remove product"/>
-                        0
-                        <img src={IconPlus} alt="add product"/>
+                        <img src={IconMinus} alt="remove product" onClick={remItem}/>
+                        <span id="qty">0</span>
+                        <img src={IconPlus} alt="add product" onClick={addItem}/>
                     </div>
 
                     <button className="add-to-cart">
@@ -48,7 +61,6 @@ function LightBox() {
                         Add to cart
                     </button>
                 </div>
-                
             </div>
             
         </div>
