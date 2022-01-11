@@ -13,17 +13,26 @@ import Cart from '../../images/icon-cart.svg';
 import './LightBox.css';
 
 function LightBox() {
-    let qty = 0;
+    let qty = 1;
+    let unit = 125.00;
     const addItem = () => {
         qty++;
         document.getElementById('qty').innerHTML = qty;
+        price(unit, qty);
     }
 
     const remItem = () => {
-        if (qty > 0){
+        if (qty >= 2){
             qty--;
         }
         document.getElementById('qty').innerHTML = qty;
+        price(unit, qty);
+    }
+
+    const price = (unit, qty) => {
+        let totalPrice = "$" + unit * qty;
+        document.getElementById('total').innerHTML = totalPrice;
+        return totalPrice;
     }
 
     return (
@@ -45,14 +54,14 @@ function LightBox() {
                 <p className="lightbox-txt-desc">These low-profile sneakers are your perfect casual wear companion. 
                 Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
                 <div className="flexItems">
-                    <span className="price">$125.00</span> <span className="price-off">50%</span>
+                    <span id="total" className="price">$125.00</span> <span className="price-off">50%</span>
                 </div>
                 <p className="price-before">$250.00</p>
 
                 <div className="flexItems">
                     <div className="item-count">
                         <img src={IconMinus} alt="remove product" onClick={remItem}/>
-                        <span id="qty">0</span>
+                        <span id="qty">1</span>
                         <img src={IconPlus} alt="add product" onClick={addItem}/>
                     </div>
 
