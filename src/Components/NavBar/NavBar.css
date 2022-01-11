@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     gap: 24em;
-    border-bottom: 1px solid hsl(220, 14%, 75%);
 }
 
 .navbar,
@@ -29,7 +28,7 @@ li:hover {
 
 .navbar-left {
     display: flex;
-    padding: 1.9em 0em;
+    margin: 3em 0em;
 }
 
 .navbar-right {
@@ -40,10 +39,11 @@ li:hover {
 
 .avatar {
     border-radius: 50%;
+    width: 50px;
 }
 
 .avatar:hover {
-    border: 1px solid hsl(26, 100%, 55%);
+    outline: 1px solid hsl(26, 100%, 55%);
     cursor: pointer;
 }
 

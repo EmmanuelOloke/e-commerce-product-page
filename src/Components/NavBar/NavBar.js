@@ -6,34 +6,28 @@ import './NavBar.css';
 
 function NavBar() {
     return (
-        <div className="">
-            <div className="navbar">
-                <div className="navbar-left">
-                    <div className="navbar">
-                        <img src={Logo} alt="logo"/>
-                    </div>
+        <div className="navbar">
+            <div className="navbar-left">
+                <img src={Logo} alt="logo"/>
 
-                    <ul>
-                        <li>Collections</li>
-                        <li>Men</li>
-                        <li>Women</li>
-                        <li>About</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
+                <ul>
+                    <li>Collections</li>
+                    <li>Men</li>
+                    <li>Women</li>
+                    <li>About</li>    
+                    <li>Contact</li>
+                </ul>
+            </div>
 
-                <div className="navbar-right">
-                    <div className="navbar">
-                        <img src={Cart} alt="Cart"/>
-                    </div>
+            <div className="navbar-right">
+                <img src={Cart} alt="Cart"/>
                 
-                    <div>
-                        <img className="avatar" style={{width: '50px'}} src={Avatar} alt="Avatar"/>
-                    </div>
+                <div>
+                    <img className="avatar" src={Avatar} alt="Avatar"/>
                 </div>
             </div>
-        </div>    
+        </div>
     )
 }
 
-export default NavBar
+export default NavBar;
