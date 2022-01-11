@@ -29,8 +29,9 @@ function LightBox() {
                 <p className="lightbox-txt-desc">These low-profile sneakers are your perfect casual wear companion. 
                 Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
                 <div className="flexItems">
-                    <span>$125.00</span> <span className="price-txt">50%</span>
+                    <span className="price">$125.00</span> <span className="price-off">50%</span>
                 </div>
+                <p className="price-before">$250.00</p>
                 
             </div>
             
