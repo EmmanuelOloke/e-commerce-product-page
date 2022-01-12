@@ -64,7 +64,7 @@ function LightBox() {
                 <div className="flexItems">
                     <div className="item-count">
                         <img src={IconMinus} alt="remove product" onClick={remItem}/>
-                        <span id="qty">0</span>
+                        <span id="qty" className="item-quantity">0</span>
                         <img src={IconPlus} alt="add product" onClick={addItem}/>
                     </div>
 
