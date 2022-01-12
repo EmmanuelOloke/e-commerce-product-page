@@ -13,7 +13,7 @@ import Cart from '../../images/icon-cart.svg';
 import './LightBox.css';
 
 function LightBox() {
-    let qty = 1;
+    let qty = 0;
     let unit = 125.00;
     const addItem = () => {
         qty++;
@@ -22,7 +22,7 @@ function LightBox() {
     }
 
     const remItem = () => {
-        if (qty >= 2){
+        if (qty >= 1){
             qty--;
         }
         document.getElementById('qty').innerHTML = qty;
@@ -30,6 +30,9 @@ function LightBox() {
     }
 
     const price = (unit, qty) => {
+        if (qty === 0){
+            document.getElementById('total').innerHTML = "$125.00";
+        }
         let totalPrice = "$" + unit * qty;
         document.getElementById('total').innerHTML = totalPrice + ".00";
         return totalPrice;
@@ -61,7 +64,7 @@ function LightBox() {
                 <div className="flexItems">
                     <div className="item-count">
                         <img src={IconMinus} alt="remove product" onClick={remItem}/>
-                        <span id="qty">1</span>
+                        <span id="qty">0</span>
                         <img src={IconPlus} alt="add product" onClick={addItem}/>
                     </div>
 
