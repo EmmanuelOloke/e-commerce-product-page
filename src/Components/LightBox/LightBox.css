@@ -16,13 +16,13 @@
     border-radius: 10px;
 }
 
-.lightbox-thumbnails {
+#lightbox-thumbnails {
     display: flex;
     gap: 1em;
     width: 25em;
 }
 
-.lightbox-thumbnails img {
+.lightbox-thumbnails-img {
     width: 5.5em;
     border-radius: 10px;
 }
@@ -30,6 +30,16 @@
 .lightbox-thumbnails img:hover {
     cursor: pointer;
     opacity: 0.5;
+}
+
+.active {
+    opacity: 0.5;
+}
+
+.thumbnail-div {
+    outline: 2px solid hsl(26, 100%, 55%);
+    border-radius: 10px;
+    height: 5.5em;
 }
 
 .lightbox-txt {

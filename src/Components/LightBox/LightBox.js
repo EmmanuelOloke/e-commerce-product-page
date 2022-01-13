@@ -42,6 +42,18 @@ function LightBox() {
         let imgSource = document.getElementById('mainImage').src;
         imgSource = productImage;
         document.getElementById('mainImage').src = imgSource;
+
+        let thumbsContainer = document.getElementById('lightbox-thumbnails');
+        let thumbs = thumbsContainer.getElementsByClassName('lightbox-thumbnails-img');
+
+        for (let i = 0; i < thumbs.length; i++) {
+            thumbs[i].addEventListener("click", function() {
+                let current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+        console.log(thumbs);
         return imgSource;
     }
 
@@ -50,11 +62,22 @@ function LightBox() {
             <div className="lightbox-images">
                 <img id="mainImage" className="lightbox-main-image" src={Product1} alt="main product"/>
 
-                <div className="lightbox-thumbnails">
-                    <img src={Product1Thumbnail} alt="product 1 thumbnail" onClick={() => switchImage(Product1)}/>
-                    <img src={Product2Thumbnail} alt="product 2 thumbnail" onClick={() => switchImage(Product2)}/>
-                    <img src={Product3Thumbnail} alt="product 3 thumbnail" onClick={() => switchImage(Product3)}/>
-                    <img src={Product4Thumbnail} alt="product 4 thumbnail" onClick={() => switchImage(Product4)}/>
+                <div id="lightbox-thumbnails">
+                    <span className="thumbnail-div" id="thumbnail-deco">
+                        <img className="active lightbox-thumbnails-img" id="product1" src={Product1Thumbnail} alt="product 1 thumbnail" onClick={() => switchImage(Product1)}/>
+                    </span>
+                    
+                    <span>
+                        <img className="lightbox-thumbnails-img" id="product2" src={Product2Thumbnail} alt="product 2 thumbnail" onClick={() => switchImage(Product2)}/>
+                    </span>
+                    
+                    <span>
+                        <img className="lightbox-thumbnails-img" id="product3" src={Product3Thumbnail} alt="product 3 thumbnail" onClick={() => switchImage(Product3)}/>
+                    </span>
+                    
+                    <span>
+                        <img className="lightbox-thumbnails-img" id="product4" src={Product4Thumbnail} alt="product 4 thumbnail" onClick={() => switchImage(Product4)}/>
+                    </span>
                 </div>
             </div>
 
