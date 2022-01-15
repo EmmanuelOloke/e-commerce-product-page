@@ -53,8 +53,6 @@ function LightBox() {
                 this.className += " active";
             });
         }
-        console.log(thumbs);
-        return imgSource;
     }
 
     return (
@@ -63,7 +61,7 @@ function LightBox() {
                 <img id="mainImage" className="lightbox-main-image" src={Product1} alt="main product"/>
 
                 <div id="lightbox-thumbnails">
-                    <span className="thumbnail-div" id="thumbnail-deco">
+                    <span className="thumbnail-div">
                         <img className="active lightbox-thumbnails-img" id="product1" src={Product1Thumbnail} alt="product 1 thumbnail" onClick={() => switchImage(Product1)}/>
                     </span>
                     
