@@ -1,12 +1,12 @@
 import Navbar from './Components/NavBar/NavBar';
-import LightBox from './Components/LightBox/LightBox';
+import Layout from './Components/Layout/Layout';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
-      <LightBox/>
+      <Layout/>
     </div>
   );
 }
