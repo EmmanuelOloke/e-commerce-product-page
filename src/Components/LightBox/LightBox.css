@@ -16,6 +16,10 @@
     border-radius: 10px;
 }
 
+.lightbox-main-image:hover {
+    cursor: pointer;
+}
+
 #lightbox-thumbnails {
     display: flex;
     gap: 1em;
