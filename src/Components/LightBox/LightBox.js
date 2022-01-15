@@ -45,12 +45,21 @@ function LightBox() {
 
         let thumbsContainer = document.getElementById('lightbox-thumbnails');
         let thumbs = thumbsContainer.getElementsByClassName('lightbox-thumbnails-img');
+        let spanDiv = document.getElementById('lightbox-thumbnails').getElementsByTagName("span");
 
         for (let i = 0; i < thumbs.length; i++) {
             thumbs[i].addEventListener("click", function() {
                 let current = document.getElementsByClassName("active");
                 current[0].className = current[0].className.replace(" active", "");
                 this.className += " active";
+            });
+        }
+
+        for (let i = 0; i < spanDiv.length; i++) {
+            spanDiv[i].addEventListener("click", function() {
+                let currentSpan = document.getElementsByClassName("thumbnail-div");
+                currentSpan[0].className = currentSpan[0].className.replace("thumbnail-div", "");
+                this.className += "thumbnail-div";
             });
         }
     }
@@ -62,7 +71,7 @@ function LightBox() {
 
                 <div id="lightbox-thumbnails">
                     <span className="thumbnail-div">
-                        <img className="active lightbox-thumbnails-img" id="product1" src={Product1Thumbnail} alt="product 1 thumbnail" onClick={() => switchImage(Product1)}/>
+                        <img className="lightbox-thumbnails-img active" id="product1" src={Product1Thumbnail} alt="product 1 thumbnail" onClick={() => switchImage(Product1)}/>
                     </span>
                     
                     <span>
