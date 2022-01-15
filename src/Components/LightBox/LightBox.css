@@ -27,7 +27,7 @@
     border-radius: 10px;
 }
 
-.lightbox-thumbnails img:hover {
+.lightbox-thumbnails-img:hover {
     cursor: pointer;
     opacity: 0.5;
 }
