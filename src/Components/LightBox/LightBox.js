@@ -10,9 +10,9 @@ import Product4Thumbnail from '../../images/image-product-4-thumbnail.jpg';
 import IconMinus from '../../images/icon-minus.svg';
 import IconPlus from '../../images/icon-plus.svg';
 import Cart from '../../images/icon-cart.svg';
-import './Layout.css';
+import './LightBox.css';
 
-function Layout() {
+function Lightbox() {
     let qty = 0;
     let unit = 125.00;
     const addItem = () => {
@@ -116,4 +116,4 @@ function Layout() {
     )
 }
 
-export default Layout;
+export default Lightbox;
