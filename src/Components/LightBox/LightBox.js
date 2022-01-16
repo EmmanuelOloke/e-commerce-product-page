@@ -111,8 +111,6 @@ function Lightbox() {
                     </button>
                 </div>
             </div>
-
-            <p>Modal will go here</p>
         </div>
     )
 }
