@@ -65,10 +65,18 @@ function Lightbox() {
         }
     }
 
+    const openLightbox = () => {
+        document.getElementById("lightboxModal").style.display = "block";
+    }
+
+    const closeLightbox = () => {
+        document.getElementById("lightboxModal").style.display = "none";
+    }
+
     return (
         <div className="lightbox-container">
             <div className="lightbox-images">
-                <img id="mainImage" className="lightbox-main-image" src={Product1} alt="main product"/>
+                <img id="mainImage" className="lightbox-main-image" src={Product1} alt="main product" onClick={() => openLightbox()}/>
 
                 <div id="lightbox-thumbnails">
                     <span className="thumbnail-div">
@@ -113,8 +121,8 @@ function Lightbox() {
                 </div>
             </div>
 
-            <div className="lightbox-modal">
-                <img src={IconClose} alt="Close Lightbox"/>
+            <div id="lightboxModal">
+                <img src={IconClose} alt="Close Lightbox" onClick={() => closeLightbox()}/>
             </div>
         </div>
     )

@@ -152,6 +152,6 @@ button img {
     align-items: center;
 }
 
-.lightbox-modal {
+#lightboxModal {
     display: none;
 }
