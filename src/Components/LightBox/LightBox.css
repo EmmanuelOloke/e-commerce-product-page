@@ -127,6 +127,7 @@
 button {
     border: none;
     box-shadow: 0 4px 8px 0 rgb(242, 140, 40);
+    transition: 0.3s;
 }
 
 button:hover {
