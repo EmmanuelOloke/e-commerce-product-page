@@ -121,8 +121,8 @@ function Lightbox() {
                 </div>
             </div>
 
-            <div id="lightboxModal">
-                <img src={IconClose} alt="Close Lightbox" onClick={() => closeLightbox()}/>
+            <div id="lightboxModal" className="modal">
+                <img className="close" src={IconClose} alt="Close Lightbox" onClick={() => closeLightbox()}/>
             </div>
         </div>
     )
