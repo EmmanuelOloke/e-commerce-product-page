@@ -29,6 +29,7 @@
 .lightbox-thumbnails-img {
     width: 5.5em;
     border-radius: 10px;
+    transition: 0.3s;
 }
 
 .lightbox-thumbnails-img:hover {
@@ -149,4 +150,8 @@ button img {
     font-weight: bold;
     font-size: 0.9em;
     align-items: center;
+}
+
+.lightbox-modal {
+    display: none;
 }
