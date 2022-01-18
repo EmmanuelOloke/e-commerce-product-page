@@ -22,7 +22,7 @@ function Lightbox() {
         price(unit, qty);
     }
 
-    const remItem = () => {
+    const removeItem = () => {
         if (qty >= 1){
             qty--;
         }
@@ -109,7 +109,7 @@ function Lightbox() {
 
                 <div className="flexItems">
                     <div className="item-count">
-                        <img src={IconMinus} alt="remove product" onClick={remItem}/>
+                        <img src={IconMinus} alt="remove product" onClick={removeItem}/>
                         <span id="qty" className="item-quantity">0</span>
                         <img src={IconPlus} alt="add product" onClick={addItem}/>
                     </div>
@@ -122,7 +122,16 @@ function Lightbox() {
             </div>
 
             <div id="lightboxModal" className="modal">
-                <img className="close" src={IconClose} alt="Close Lightbox" onClick={() => closeLightbox()}/>
+                <div className="modal-content">
+                    <img className="close" src={IconClose} alt="Close Lightbox" onClick={() => closeLightbox()}/>
+
+                    <div className="main-modal">
+                        {/* <img src={} alt="Previous Icon"/> */}
+                        <img className="slide-images" src={Product1} alt="Main product one"/>
+                        {/* <img src={} alt="Next Icon"/> */}
+                    </div>
+                </div>
+                
             </div>
         </div>
     )
