@@ -128,9 +128,13 @@ function Lightbox() {
                     <img className="close" src={IconClose} alt="Close Lightbox" onClick={() => closeLightbox()}/>
 
                     <div className="main-modal">
-                        <img src={IconPrevious} alt="Previous Icon"/>
+                        <img className="main-modal-icon prev" src={IconPrevious} alt="Previous Icon"/>
                         <img className="slide-images" src={Product1} alt="Main product one"/>
-                        <img src={IconNext} alt="Next Icon"/>
+                        <img className="main-modal-icon next" src={IconNext} alt="Next Icon"/>
+                    </div>
+
+                    <div className="modal-thumnails">
+                        
                     </div>
                 </div>
                 

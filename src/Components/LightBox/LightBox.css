@@ -172,7 +172,7 @@ button img {
     justify-content: center;
     gap: 1.3em;
     border: 1px solid red;
-    width: 35em;
+    width: 40em;
     align-items: center;
 }
 
@@ -185,10 +185,26 @@ button img {
 .main-modal {
     display: flex;
     flex-direction: row;
-    position: relative;
 }
 
 .slide-images {
     width: 30em;
     border-radius: 10px;
+}
+
+.main-modal-icon {
+    padding: 1em;
+    background-color: white;
+    border-radius: 51%;
+    cursor: pointer;
+}
+
+.prev {
+    margin-right: -1.5em;
+    z-index: 1;
+}
+
+.next {
+    margin-left: -1.5em;
+    z-index: 1;
 }
