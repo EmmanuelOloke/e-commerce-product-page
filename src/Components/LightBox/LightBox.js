@@ -10,6 +10,8 @@ import Product4Thumbnail from '../../images/image-product-4-thumbnail.jpg';
 import IconClose from '../../images/icon-close.svg';
 import IconMinus from '../../images/icon-minus.svg';
 import IconPlus from '../../images/icon-plus.svg';
+import IconPrevious from '../../images/icon-previous.svg';
+import IconNext from '../../images/icon-next.svg';
 import Cart from '../../images/icon-cart.svg';
 import './LightBox.css';
 
@@ -126,9 +128,9 @@ function Lightbox() {
                     <img className="close" src={IconClose} alt="Close Lightbox" onClick={() => closeLightbox()}/>
 
                     <div className="main-modal">
-                        {/* <img src={} alt="Previous Icon"/> */}
+                        <img src={IconPrevious} alt="Previous Icon"/>
                         <img className="slide-images" src={Product1} alt="Main product one"/>
-                        {/* <img src={} alt="Next Icon"/> */}
+                        <img src={IconNext} alt="Next Icon"/>
                     </div>
                 </div>
                 
