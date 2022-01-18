@@ -7,6 +7,7 @@ import Product3 from '../../images/image-product-3.jpg';
 import Product3Thumbnail from '../../images/image-product-3-thumbnail.jpg';
 import Product4 from '../../images/image-product-4.jpg';
 import Product4Thumbnail from '../../images/image-product-4-thumbnail.jpg';
+import IconClose from '../../images/icon-close.svg';
 import IconMinus from '../../images/icon-minus.svg';
 import IconPlus from '../../images/icon-plus.svg';
 import Cart from '../../images/icon-cart.svg';
@@ -110,6 +111,10 @@ function Lightbox() {
                         Add to cart
                     </button>
                 </div>
+            </div>
+
+            <div className="lightbox-modal">
+                <img src={IconClose} alt="Close Lightbox"/>
             </div>
         </div>
     )
