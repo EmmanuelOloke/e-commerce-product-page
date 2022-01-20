@@ -67,6 +67,12 @@ function Lightbox() {
         }
     }
 
+    const switchModalImage = (modalImage) => {
+        let modalImageSource = document.getElementById('lightboxMainImage').src;
+        modalImageSource = modalImage;
+        document.getElementById('lightboxMainImage').src = modalImageSource;
+    }
+
     const openLightbox = () => {
         document.getElementById("lightboxModal").style.display = "flex";
     }
@@ -129,26 +135,26 @@ function Lightbox() {
 
                     <div className="main-modal">
                         <img className="main-modal-icon prev" src={IconPrevious} alt="Previous Icon"/>
-                        <img className="slide-images" src={Product1} alt="Main product one"/>
+                        <img id="lightboxMainImage" className="slide-images" src={Product1} alt="Main product one"/>
                         <img className="main-modal-icon next" src={IconNext} alt="Next Icon"/>
                     </div>
 
                     <div className="modal-thumnails">
                         <div id="lightbox-thumbnails">
                             <span className="thumbnail-div">
-                                <img className="lightbox-thumbnails-img active" id="product1" src={Product1Thumbnail} alt="product 1 thumbnail" onClick={() => switchImage(Product1)}/>
+                                <img className="lightbox-thumbnails-img active" id="product1" src={Product1Thumbnail} alt="product 1 thumbnail" onClick={() => switchModalImage(Product1)}/>
                             </span>
                             
                             <span>
-                                <img className="lightbox-thumbnails-img" id="product2" src={Product2Thumbnail} alt="product 2 thumbnail" onClick={() => switchImage(Product2)}/>
+                                <img className="lightbox-thumbnails-img" id="product2" src={Product2Thumbnail} alt="product 2 thumbnail" onClick={() => switchModalImage(Product2)}/>
                             </span>
                             
                             <span>
-                                <img className="lightbox-thumbnails-img" id="product3" src={Product3Thumbnail} alt="product 3 thumbnail" onClick={() => switchImage(Product3)}/>
+                                <img className="lightbox-thumbnails-img" id="product3" src={Product3Thumbnail} alt="product 3 thumbnail" onClick={() => switchModalImage(Product3)}/>
                             </span>
                             
                             <span>
-                                <img className="lightbox-thumbnails-img" id="product4" src={Product4Thumbnail} alt="product 4 thumbnail" onClick={() => switchImage(Product4)}/>
+                                <img className="lightbox-thumbnails-img" id="product4" src={Product4Thumbnail} alt="product 4 thumbnail" onClick={() => switchModalImage(Product4)}/>
                             </span>
                         </div>
                     </div>
