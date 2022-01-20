@@ -68,7 +68,7 @@ function Lightbox() {
     }
 
     const openLightbox = () => {
-        document.getElementById("lightboxModal").style.display = "block";
+        document.getElementById("lightboxModal").style.display = "flex";
     }
 
     const closeLightbox = () => {
@@ -153,7 +153,6 @@ function Lightbox() {
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     )

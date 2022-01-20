@@ -162,18 +162,19 @@ button img {
     height: 100%;
     overflow: auto;
     background-color: rgba(100, 100, 100, 0.6);
-    text-align: center;
+    align-items: center;
 }
 
 .modal-content {
     position: relative;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 1.3em;
     border: 1px solid red;
     width: 40em;
-    align-items: center;
 }
 
 .close {
@@ -195,7 +196,7 @@ button img {
 .main-modal-icon {
     padding: 1em;
     background-color: white;
-    border-radius: 51%;
+    border-radius: 50%;
     cursor: pointer;
 }
 
