@@ -174,13 +174,13 @@ button img {
     align-items: center;
     gap: 1.3em;
     border: 1px solid red;
-    width: 40em;
+    width: 32em;
 }
 
 .close {
     cursor: pointer;
     width: 1.3em;
-    margin-left: 89%;
+    margin-left: 96%;
 }
 
 .main-modal {
@@ -189,7 +189,7 @@ button img {
 }
 
 .slide-images {
-    width: 30em;
+    width: 32em;
     border-radius: 10px;
 }
 
