@@ -22,12 +22,12 @@
 
 #lightbox-thumbnails {
     display: flex;
-    gap: 1em;
+    gap: 1.7em;
     width: 25em;
 }
 
 .lightbox-thumbnails-img {
-    width: 5.5em;
+    width: 5em;
     border-radius: 10px;
     transition: 0.3s;
 }
@@ -44,7 +44,7 @@
 .thumbnail-div {
     outline: 2px solid hsl(26, 100%, 55%);
     border-radius: 10px;
-    height: 5.5em;
+    height: 5em;
 }
 
 .lightbox-txt {
@@ -173,7 +173,6 @@ button img {
     justify-content: center;
     align-items: center;
     gap: 1.3em;
-    border: 1px solid red;
     width: 32em;
 }
 
