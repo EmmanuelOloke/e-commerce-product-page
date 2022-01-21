@@ -82,29 +82,30 @@ function Lightbox() {
     }
 
     let imageCount = 0;
+    let modalImages = [Product1, Product2, Product3, Product4];
+
     const nextModalImage = () => {
         imageCount++;
-        let modalImages = [Product1, Product2, Product3, Product4];
-        let modalImage = modalImages[imageCount];
 
-        document.getElementById('lightboxMainImage').src = modalImage;
-        
-        if (imageCount > modalImages.length) {
+        if (imageCount > 3) {
             imageCount = 0;
         }
+
+        let modalImage = modalImages[imageCount];
+        
+        document.getElementById('lightboxMainImage').src = modalImage;
     }
 
     const prevModalImage = () => {
         imageCount--;
-        let modalImages = [Product1, Product2, Product3, Product4];
-        let modalImage = modalImages[imageCount];
 
         if (imageCount < 0) {
             imageCount = 3;
         }
-        
+
+        let modalImage = modalImages[imageCount];
+
         document.getElementById('lightboxMainImage').src = modalImage;
-        
     }
 
 
