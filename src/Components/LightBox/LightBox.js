@@ -67,12 +67,6 @@ function Lightbox() {
         }
     }
 
-    const switchModalImage = (modalImage) => {
-        let modalImageSource = document.getElementById('lightboxMainImage').src;
-        modalImageSource = modalImage;
-        document.getElementById('lightboxMainImage').src = modalImageSource;
-    }
-
     const openLightbox = () => {
         document.getElementById("lightboxModal").style.display = "flex";
     }
@@ -80,6 +74,39 @@ function Lightbox() {
     const closeLightbox = () => {
         document.getElementById("lightboxModal").style.display = "none";
     }
+
+    const switchModalImage = (modalImage) => {
+        let modalImageSource = document.getElementById('lightboxMainImage').src;
+        modalImageSource = modalImage;
+        document.getElementById('lightboxMainImage').src = modalImageSource;
+    }
+
+    let imageCount = 0;
+    const nextModalImage = () => {
+        imageCount++;
+        let modalImages = [Product1, Product2, Product3, Product4];
+        let modalImage = modalImages[imageCount];
+
+        document.getElementById('lightboxMainImage').src = modalImage;
+        
+        if (imageCount > modalImages.length) {
+            imageCount = 0;
+        }
+    }
+
+    const prevModalImage = () => {
+        imageCount--;
+        let modalImages = [Product1, Product2, Product3, Product4];
+        let modalImage = modalImages[imageCount];
+
+        if (imageCount < 0) {
+            imageCount = 3;
+        }
+        
+        document.getElementById('lightboxMainImage').src = modalImage;
+        
+    }
+
 
     return (
         <div className="lightbox-container">
@@ -134,9 +161,9 @@ function Lightbox() {
                     <img className="close" src={IconClose} alt="Close Lightbox" onClick={() => closeLightbox()}/>
 
                     <div className="main-modal">
-                        <img className="main-modal-icon prev" src={IconPrevious} alt="Previous Icon"/>
+                        <img className="main-modal-icon prev" src={IconPrevious} alt="Previous Icon" onClick={() => prevModalImage()}/>
                         <img id="lightboxMainImage" className="slide-images" src={Product1} alt="Main product one"/>
-                        <img className="main-modal-icon next" src={IconNext} alt="Next Icon"/>
+                        <img className="main-modal-icon next" src={IconNext} alt="Next Icon" onClick={() => nextModalImage()}/>
                     </div>
 
                     <div className="modal-thumnails">
