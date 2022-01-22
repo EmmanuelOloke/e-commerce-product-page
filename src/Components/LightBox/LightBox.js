@@ -169,19 +169,19 @@ function Lightbox() {
 
                     <div id="lightbox-thumbnails" className="modal-thumnails">
                         <span className="thumbnail-div">
-                            <img className="lightbox-thumbnails-img active" id="product1" src={Product1Thumbnail} alt="product 1 thumbnail" onClick={() => switchModalImage(Product1)}/>
+                            <img className="modal-thumbnails-img active" id="product1" src={Product1Thumbnail} alt="product 1 thumbnail" onClick={() => switchModalImage(Product1)}/>
                         </span>
                             
                         <span>
-                            <img className="lightbox-thumbnails-img" id="product2" src={Product2Thumbnail} alt="product 2 thumbnail" onClick={() => switchModalImage(Product2)}/>
+                            <img className="modal-thumbnails-img" id="product2" src={Product2Thumbnail} alt="product 2 thumbnail" onClick={() => switchModalImage(Product2)}/>
                         </span>
                             
                         <span>
-                            <img className="lightbox-thumbnails-img" id="product3" src={Product3Thumbnail} alt="product 3 thumbnail" onClick={() => switchModalImage(Product3)}/>
+                            <img className="modal-thumbnails-img" id="product3" src={Product3Thumbnail} alt="product 3 thumbnail" onClick={() => switchModalImage(Product3)}/>
                         </span>
                             
                         <span>
-                            <img className="lightbox-thumbnails-img" id="product4" src={Product4Thumbnail} alt="product 4 thumbnail" onClick={() => switchModalImage(Product4)}/>
+                            <img className="modal-thumbnails-img" id="product4" src={Product4Thumbnail} alt="product 4 thumbnail" onClick={() => switchModalImage(Product4)}/>
                         </span>
                     </div>
                 </div>

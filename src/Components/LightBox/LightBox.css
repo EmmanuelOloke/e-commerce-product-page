@@ -208,3 +208,15 @@ button img {
     margin-left: -1.5em;
     z-index: 1;
 }
+
+.modal-thumbnails-img {
+    width: 5em;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.modal-thumbnails-img:hover {
+    cursor: pointer;
+    color: white;
+    opacity: 0.6;
+}
