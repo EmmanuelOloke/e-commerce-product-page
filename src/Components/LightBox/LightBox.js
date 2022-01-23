@@ -17,7 +17,7 @@ import './LightBox.css';
 
 function Lightbox() {
     let qty = 0;
-    let unit = 125.00;
+    let unit = 135.00;
     const addItem = () => {
         qty++;
         document.getElementById('qty').innerHTML = qty;
