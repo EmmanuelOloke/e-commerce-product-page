@@ -7,6 +7,15 @@ import Delete from '../../images/icon-delete.svg';
 import './NavBar.css';
 
 function NavBar() {
+    const showCart = () => {
+        let cart = document.getElementById('cart');
+        if (cart.style.display === 'none') {
+            cart.style.display = 'block';
+        }
+        else {
+            cart.style.display = 'none';
+        }
+    }
     return (
         <div className="navbar">
             <div className="navbar-left">
@@ -22,7 +31,7 @@ function NavBar() {
             </div>
 
             <div className="navbar-right">
-                <span className="cart-icon">
+                <span className="cart-icon" onClick={() => showCart()}>
                     <img src={Cart} alt="Cart Icon"/>
                     <span className="cart-badge">5</span>
                 </span>
@@ -32,7 +41,7 @@ function NavBar() {
                 </div>
             </div>
 
-            <div className="cart-items">
+            <div id="cart" className="cart-items">
                 <p className="title bold">Cart</p>
                 <hr style={{opacity: 0.3}}/>
                 <div className="item-details cart-content">
