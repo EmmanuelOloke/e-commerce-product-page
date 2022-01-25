@@ -20,7 +20,7 @@ function NavBar() {
             </div>
 
             <div className="navbar-right">
-                <span className="cart">
+                <span className="cart-icon">
                     <img src={Cart} alt="Cart Icon"/>
                     <span className="cart-badge">5</span>
                 </span>
@@ -28,6 +28,11 @@ function NavBar() {
                 <div>
                     <img className="avatar" src={Avatar} alt="Avatar"/>
                 </div>
+            </div>
+
+            <div className="cart-items">
+                <p>Cart</p>
+                <hr/>
             </div>
         </div>
     )

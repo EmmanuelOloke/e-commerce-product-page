@@ -14,7 +14,7 @@ import IconPrevious from '../../images/icon-previous.svg';
 import IconNext from '../../images/icon-next.svg';
 import Cart from '../../images/icon-cart.svg';
 import './LightBox.css';
-
+// import NavBar from '../NavBar/NavBar';
 function Lightbox() {
     let qty = 0;
     let unit = 125.00;
@@ -40,6 +40,10 @@ function Lightbox() {
         document.getElementById('total').innerHTML = totalPrice + ".00";
         return totalPrice;
     }
+
+    // const addToCart = () => {
+    //     document.getElementById('qty').innerHTML = qty;
+    // }
 
     const switchImage = (productImage) => {
         let imgSource = document.getElementById('mainImage').src;
