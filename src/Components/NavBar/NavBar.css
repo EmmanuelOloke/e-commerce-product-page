@@ -67,10 +67,11 @@ li:hover {
     width: 20em;
     top: 6em;
     right: 9em;
+    padding-bottom: 30px;
 }
 
 .cart-content {
-    padding: 0.3em 1.3em;
+    padding: 1em 1.3em;
 }
 
 .item-details {
@@ -97,6 +98,21 @@ li:hover {
 .cart-total {
     color: hsl(220, 13%, 13%);
     font-weight: bold;
+}
+
+.checkout {
+    width: 20.5em;
+    border-radius: 7px;
+    background-color: hsl(26, 100%, 55%);
+    color: hsl(0, 0%, 100%);
+    font-weight: bold;
+    border: none;
+    padding: 1.2em 0em;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 .avatar {

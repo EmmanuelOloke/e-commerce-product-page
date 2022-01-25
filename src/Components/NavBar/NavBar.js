@@ -43,6 +43,7 @@ function NavBar() {
                     </div>
                     <img src={Delete} alt="Delete Button"/>
                 </div>
+                <button className="checkout">Checkout</button>
             </div>
         </div>
     )
