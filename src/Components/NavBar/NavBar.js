@@ -11,6 +11,16 @@ function NavBar() {
         let cart = document.getElementById('empty');
         cart.classList.toggle('show');
     }
+
+    // window.onclick = (e) => {
+    //     if (!e.target.matches('.cart-items')) {
+    //         let cart = document.getElementById('empty');
+    //         if (cart.classList.contains('show')) {
+    //             cart.classList.remove('show');
+    //         }
+    //     }
+    // }
+
     return (
         <div className="navbar">
             <div className="navbar-left">
