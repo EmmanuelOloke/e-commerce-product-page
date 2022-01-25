@@ -49,7 +49,6 @@ li:hover {
 }
 
 .cart-badge {
-    /* display: none; */
     background-color: hsl(26, 100%, 55%);
     color: #FFF;
     text-align: center;
@@ -73,6 +72,10 @@ li:hover {
     top: 6em;
     right: 9em;
     padding-bottom: 30px;
+}
+
+.show {
+    display: block;
 }
 
 .title {

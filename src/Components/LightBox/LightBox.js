@@ -112,7 +112,6 @@ function Lightbox() {
         document.getElementById('lightboxMainImage').src = modalImage;
     }
 
-
     return (
         <div className="lightbox-container">
             <div className="lightbox-images">
