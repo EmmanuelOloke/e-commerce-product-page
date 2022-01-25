@@ -8,7 +8,7 @@ import './NavBar.css';
 
 function NavBar() {
     const showCart = () => {
-        let cart = document.getElementById('cart');
+        let cart = document.getElementById('empty');
         if (cart.style.display === 'none') {
             cart.style.display = 'block';
         }
@@ -53,6 +53,12 @@ function NavBar() {
                     <img src={Delete} alt="Delete Button"/>
                 </div>
                 <button className="checkout">Checkout</button>
+            </div>
+
+            <div id="empty" className="cart-items empty">
+                <p className="title bold">Cart</p>
+                <hr style={{opacity: 0.3}}/>
+                <p className="empty-content">Your cart is empty.</p>
             </div>
         </div>
     )

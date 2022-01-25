@@ -79,6 +79,13 @@ li:hover {
     padding: 0.3em 1.3em;
 }
 
+.empty-content {
+    font-weight: bold;
+    text-align: center;
+    color: hsl(219, 9%, 45%);
+    padding: 3em 0em;
+}
+
 .item-details {
     display: flex;
     flex-direction: row;
