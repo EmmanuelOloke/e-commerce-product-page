@@ -65,6 +65,8 @@ function NavBar() {
                 <hr style={{opacity: 0.3}}/>
                 <p className="empty-content">Your cart is empty.</p>
             </div>
+
+            <hr/>
         </div>
     )
 }

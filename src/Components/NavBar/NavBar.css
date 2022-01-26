@@ -74,6 +74,15 @@ li:hover {
     padding-bottom: 30px;
 }
 
+hr {
+    position: absolute;
+    border-width: thin;
+    color: hsl(220, 14%, 75%);
+    opacity: 0.4;
+    top: 6.56em;
+    width: 1020px;
+}
+
 .show {
     display: block;
 }
