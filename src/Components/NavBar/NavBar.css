@@ -72,6 +72,7 @@ li:hover {
     top: 6em;
     right: 9em;
     padding-bottom: 30px;
+    z-index: 1;
 }
 
 hr {
