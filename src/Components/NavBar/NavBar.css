@@ -75,7 +75,7 @@ li:hover {
     z-index: 1;
 }
 
-hr {
+.navbar-hr {
     position: absolute;
     border-width: thin;
     color: hsl(220, 14%, 75%);

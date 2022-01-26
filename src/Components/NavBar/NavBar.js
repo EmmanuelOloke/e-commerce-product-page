@@ -66,7 +66,7 @@ function NavBar() {
                 <p className="empty-content">Your cart is empty.</p>
             </div>
 
-            <hr/>
+            <hr className="navbar-hr"/>
         </div>
     )
 }
