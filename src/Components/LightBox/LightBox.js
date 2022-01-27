@@ -113,7 +113,7 @@ function Lightbox() {
     }
 
     return (
-        <div className="lightbox-container">
+        <main className="lightbox-container">
             <div className="lightbox-images">
                 <img id="mainImage" className="lightbox-main-image" src={Product1} alt="main product" onClick={() => openLightbox()}/>
 
@@ -189,7 +189,7 @@ function Lightbox() {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     )
 }
 
