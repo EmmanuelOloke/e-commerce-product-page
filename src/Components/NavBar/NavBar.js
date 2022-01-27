@@ -8,7 +8,7 @@ import './NavBar.css';
 
 function NavBar() {
     const showCart = () => {
-        let cart = document.getElementById('empty');
+        let cart = document.getElementById('cart');
         cart.classList.toggle('show');
     }
 
@@ -22,7 +22,7 @@ function NavBar() {
     // }
 
     return (
-        <div className="navbar">
+        <navbar className="navbar">
             <div className="navbar-left">
                 <img src={Logo} alt="logo"/>
 
@@ -67,7 +67,7 @@ function NavBar() {
             </div>
 
             <hr className="navbar-hr"/>
-        </div>
+        </navbar>
     )
 }
 

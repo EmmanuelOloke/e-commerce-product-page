@@ -86,7 +86,7 @@ function Lightbox() {
     }
 
     let imageCount = 0;
-    let modalImages = [Product1, Product2, Product3, Product4];
+    const modalImages = [Product1, Product2, Product3, Product4];
 
     const nextModalImage = () => {
         imageCount++;
