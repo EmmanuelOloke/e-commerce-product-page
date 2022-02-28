@@ -6,7 +6,7 @@ import Product1Thumbnail from '../../images/image-product-1-thumbnail.jpg';
 import Delete from '../../images/icon-delete.svg';
 import './NavBar.css';
 
-function NavBar(props) {
+export default function NavBar(props) {
     const {cartItems} = props;
     const showCart = () => {
         let cart = document.getElementById('empty');
@@ -63,5 +63,3 @@ function NavBar(props) {
         </navbar>
     )
 }
-
-export default NavBar;
