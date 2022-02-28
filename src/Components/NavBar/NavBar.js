@@ -9,18 +9,9 @@ import './NavBar.css';
 function NavBar(props) {
     const {cartItems} = props;
     const showCart = () => {
-        let cart = document.getElementById('cart');
+        let cart = document.getElementById('empty');
         cart.classList.toggle('show');
     }
-
-    // window.onclick = (e) => {
-    //     if (!e.target.matches('.cart-items')) {
-    //         let cart = document.getElementById('empty');
-    //         if (cart.classList.contains('show')) {
-    //             cart.classList.remove('show');
-    //         }
-    //     }
-    // }
 
     return (
         <navbar className="navbar">
