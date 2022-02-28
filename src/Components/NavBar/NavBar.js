@@ -39,7 +39,7 @@ function NavBar(props) {
             <div className="navbar-right">
                 <span className="cart-icon" onClick={() => showCart()}>
                     <img src={Cart} alt="Cart Icon"/>
-                    <span className="cart-badge">5</span>
+                    <span className="cart-badge">3</span>
                 </span>
                 
                 <div>
