@@ -1,12 +1,15 @@
-import React from 'react';
 import Logo from '../../images/logo.svg';
 import Cart from '../../images/icon-cart.svg';
 import Avatar from '../../images/image-avatar.png';
 import Product1Thumbnail from '../../images/image-product-1-thumbnail.jpg';
 import Delete from '../../images/icon-delete.svg';
 import './NavBar.css';
+import { AppContext } from '../../AppContext';
+import React, {useContext} from 'react';
 
 export default function NavBar(props) {
+    const quantity = useContext(AppContext);
+
     const {cartItems} = props;
     const showCart = () => {
         let cart = document.getElementById('empty');
@@ -30,7 +33,7 @@ export default function NavBar(props) {
             <div className="navbar-right">
                 <span className="cart-icon" onClick={() => showCart()}>
                     <img src={Cart} alt="Cart Icon"/>
-                    <span className="cart-badge">3</span>
+                    <span className="cart-badge">{quantity}</span>
                 </span>
                 
                 <div>

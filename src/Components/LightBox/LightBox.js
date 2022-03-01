@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { AppContext } from '../../AppContext';
 import Product1 from '../../images/image-product-1.jpg';
 import Product1Thumbnail from '../../images/image-product-1-thumbnail.jpg';
 import Product2 from '../../images/image-product-2.jpg';
@@ -15,7 +16,8 @@ import IconNext from '../../images/icon-next.svg';
 import Cart from '../../images/icon-cart.svg';
 import './LightBox.css';
 // import NavBar from '../NavBar/NavBar';
-function Lightbox() {
+export default function Lightbox() {
+    const quantity = useContext(AppContext);
     let qty = 0;
     let unit = 125.00;
     const addItem = () => {
@@ -149,7 +151,7 @@ function Lightbox() {
                 <div className="flexItems">
                     <div className="item-count">
                         <img src={IconMinus} alt="remove product" onClick={removeItem}/>
-                        <span id="qty" className="item-quantity">0</span>
+                        <span id="qty" className="item-quantity">{quantity}</span>
                         <img src={IconPlus} alt="add product" onClick={addItem}/>
                     </div>
 
@@ -192,5 +194,3 @@ function Lightbox() {
         </main>
     )
 }
-
-export default Lightbox;
