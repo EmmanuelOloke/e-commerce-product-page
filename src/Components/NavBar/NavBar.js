@@ -8,7 +8,7 @@ import { AppContext } from '../../AppContext';
 import React, {useContext} from 'react';
 
 export default function NavBar(props) {
-    const quantity = useContext(AppContext);
+    const {quantity} = useContext(AppContext);
 
     const {cartItems} = props;
     const showCart = () => {

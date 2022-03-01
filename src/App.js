@@ -1,19 +1,17 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Navbar from './Components/NavBar/NavBar';
 import LightBox from './Components/LightBox/LightBox';
 import './App.css';
-import { AppContext } from './AppContext';
+import { AppProvider } from './AppContext';
 
 function App() {
-  const [quantity, setQuantity] = useState(0);
-
   return (
+    <AppProvider>
     <div className="App">
-      <AppContext.Provider value={[quantity, setQuantity]}>
         <Navbar/>
         <LightBox/>
-      </AppContext.Provider>
     </div>
+      </AppProvider>
   );
 }
 

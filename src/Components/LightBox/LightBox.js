@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import { AppContext } from '../../AppContext';
 import Product1 from '../../images/image-product-1.jpg';
 import Product1Thumbnail from '../../images/image-product-1-thumbnail.jpg';
@@ -15,24 +15,19 @@ import IconPrevious from '../../images/icon-previous.svg';
 import IconNext from '../../images/icon-next.svg';
 import Cart from '../../images/icon-cart.svg';
 import './LightBox.css';
-// import NavBar from '../NavBar/NavBar';
+
+
 export default function Lightbox() {
-    const quantity = useContext(AppContext);
-    let qty = 0;
-    let unit = 125.00;
-    const addItem = () => {
-        qty++;
-        document.getElementById('qty').innerHTML = qty;
-        price(unit, qty);
+    const {quantity, setQuantity} = useContext(AppContext);
+
+    let qty = 0
+    
+    const [unit] = useState(125.00)
+
+    const setCartQty = () => {
+        setQuantity(qty)
     }
 
-    const removeItem = () => {
-        if (qty >= 1){
-            qty--;
-        }
-        document.getElementById('qty').innerHTML = qty;
-        price(unit, qty);
-    }
 
     const price = (unit, qty) => {
         let totalPrice = "$" + unit * qty;
@@ -42,6 +37,22 @@ export default function Lightbox() {
         document.getElementById('total').innerHTML = totalPrice + ".00";
         return totalPrice;
     }
+
+    const addItem = () => {
+        qty++
+        document.getElementById('qty').innerHTML = qty;
+        price(unit, qty);
+    }
+
+    const removeItem = () => {
+        if (qty >= 1){
+            qty--
+        }
+        document.getElementById('qty').innerHTML = qty;
+        price(unit, qty);
+    }
+
+    
 
     // const addToCart = () => {
     //     document.getElementById('qty').innerHTML = qty;
@@ -155,7 +166,7 @@ export default function Lightbox() {
                         <img src={IconPlus} alt="add product" onClick={addItem}/>
                     </div>
 
-                    <button className="add-to-cart">
+                    <button className="add-to-cart" onClick={setCartQty}>
                         <img src={Cart} alt="cart icon" style={{color: 'red'}}/>
                         Add to cart
                     </button>
