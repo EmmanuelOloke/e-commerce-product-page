@@ -8,7 +8,7 @@ import { AppContext } from '../../AppContext';
 import React, {useContext} from 'react';
 
 export default function NavBar() {
-    const {quantity, price} = useContext(AppContext);
+    const {quantity, setQuantity, price, setPrice} = useContext(AppContext);
 
     const showCart = () => {
         const filledCart = document.getElementById('filled-cart');
@@ -21,6 +21,11 @@ export default function NavBar() {
 
     const noBadge = () => {
         document.getElementById("badge").style.display = "none";
+    }
+
+    const removeCartItems = () => {
+        setQuantity(0);
+        setPrice(125.00.toFixed(2));
     }
 
     return (
@@ -66,7 +71,7 @@ export default function NavBar() {
                             <div>Fall Limited Edition Sneakers</div>
                             <div>$125.00 x {quantity} <span className="bold">{`$${price}`}</span></div>
                         </div>
-                        <img src={Delete} alt="Delete Button"/>
+                        <img className="remove-items" src={Delete} alt="Delete Button" onClick={() => removeCartItems()}/>
                     </div>
                     <button className="checkout">Checkout</button>
                 </div>

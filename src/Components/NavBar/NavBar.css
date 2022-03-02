@@ -122,6 +122,10 @@ li:hover {
     color: hsl(219, 9%, 45%);
 }
 
+.remove-items {
+    cursor: pointer;
+}
+
 .bold {
     color: hsl(220, 13%, 13%);
     font-weight: bold;
