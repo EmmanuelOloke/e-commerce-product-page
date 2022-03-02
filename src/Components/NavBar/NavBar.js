@@ -64,7 +64,7 @@ export default function NavBar() {
                         <img className="thumbnail" src={Product1Thumbnail} alt="Product 1 Thumbnail"/>
                         <div className="details-text">
                             <div>Fall Limited Edition Sneakers</div>
-                            <div>$125.00 x 3 <span className="bold">$375.00</span></div>
+                            <div>$125.00 x {quantity} <span className="bold">$375.00</span></div>
                         </div>
                         <img src={Delete} alt="Delete Button"/>
                     </div>
