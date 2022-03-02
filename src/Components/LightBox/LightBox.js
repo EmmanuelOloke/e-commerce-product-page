@@ -25,6 +25,10 @@ export default function Lightbox() {
     let totalPrice;
     
     const calculatePrice = (unit, qty) => {
+        if (qty === 0){
+            totalPrice = unit;
+            return;
+        }
         totalPrice = unit * qty;
         document.getElementById('total').innerHTML = `$${totalPrice.toFixed(2)}`;
         return totalPrice;
@@ -37,11 +41,12 @@ export default function Lightbox() {
     }
     
     const removeItem = () => {
-        if (qty >= 1){
-            qty--;
+        if (qty < 1){
+            return;
         }
-        document.getElementById('qty').innerHTML = qty;
+        qty--;
         calculatePrice(unit, qty);
+        document.getElementById('qty').innerHTML = qty;
     }
     
     const setCartQty = () => {
