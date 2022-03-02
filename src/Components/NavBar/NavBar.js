@@ -7,13 +7,16 @@ import './NavBar.css';
 import { AppContext } from '../../AppContext';
 import React, {useContext} from 'react';
 
-export default function NavBar(props) {
+export default function NavBar() {
     const {quantity} = useContext(AppContext);
 
-    const {cartItems} = props;
     const showCart = () => {
-        let cart = document.getElementById('empty');
-        cart.classList.toggle('show');
+        const filledCart = document.getElementById('filled-cart');
+        const emptyCart = document.getElementById('empty-cart');
+        if (quantity === 0)
+            emptyCart.classList.toggle('show');
+        else
+            filledCart.classList.toggle('show');
     }
 
     const noBadge = () => {
@@ -53,8 +56,8 @@ export default function NavBar(props) {
                 </div>
             </div>
 
-            {cartItems ? (
-                <div id="cart" className="cart-items">
+            { (quantity > 0) ? (
+                <div id="filled-cart" className="cart-items">
                     <p className="title bold">Cart</p>
                     <hr style={{opacity: 0.3}}/>
                     <div className="item-details cart-content">
@@ -68,7 +71,7 @@ export default function NavBar(props) {
                     <button className="checkout">Checkout</button>
                 </div>
             ) : (
-                <div id="empty" className="cart-items">
+                <div id="empty-cart" className="cart-items">
                     <p className="title bold">Cart</p>
                     <hr style={{opacity: 0.3}}/>
                     <p className="empty-content">Your cart is empty.</p>
