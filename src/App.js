@@ -7,11 +7,11 @@ import { AppProvider } from './AppContext';
 function App() {
   return (
     <AppProvider>
-    <div className="App">
-        <Navbar/>
-        <LightBox/>
-    </div>
-      </AppProvider>
+      <div className="App">
+          <Navbar/>
+          <LightBox/>
+      </div>
+    </AppProvider>
   );
 }
 

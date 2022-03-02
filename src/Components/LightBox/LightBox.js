@@ -20,15 +20,10 @@ import './LightBox.css';
 export default function Lightbox() {
     const {quantity, setQuantity} = useContext(AppContext);
 
-    let qty = 0
+    let qty = quantity;
     
-    const [unit] = useState(125.00)
-
-    const setCartQty = () => {
-        setQuantity(qty)
-    }
-
-
+    const [unit] = useState(125.00);
+    
     const price = (unit, qty) => {
         let totalPrice = "$" + unit * qty;
         if (totalPrice === "$0.00"){
@@ -37,21 +32,24 @@ export default function Lightbox() {
         document.getElementById('total').innerHTML = totalPrice + ".00";
         return totalPrice;
     }
-
+    
     const addItem = () => {
         qty++
         document.getElementById('qty').innerHTML = qty;
         price(unit, qty);
     }
-
+    
     const removeItem = () => {
         if (qty >= 1){
-            qty--
+            qty--;
         }
         document.getElementById('qty').innerHTML = qty;
         price(unit, qty);
     }
-
+    
+    const setCartQty = () => {
+        setQuantity(qty);
+    }
     
 
     // const addToCart = () => {
