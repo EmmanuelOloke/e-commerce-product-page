@@ -16,6 +16,10 @@ export default function NavBar(props) {
         cart.classList.toggle('show');
     }
 
+    const noBadge = () => {
+        document.getElementById("badge").style.display = "none";
+    }
+
     return (
         <navbar className="navbar">
             <div className="navbar-left">
@@ -33,7 +37,15 @@ export default function NavBar(props) {
             <div className="navbar-right">
                 <span className="cart-icon" onClick={() => showCart()}>
                     <img src={Cart} alt="Cart Icon"/>
-                    <span className="cart-badge">{quantity}</span>
+                    { (quantity === 0) ? 
+                            (
+                                <span id="badge" className="cart-badge">{quantity}</span>
+                                ,() => noBadge
+                         )
+                        : (
+                            <span id="badge" className="cart-badge">{quantity}</span>
+                        )
+                    }
                 </span>
                 
                 <div>
