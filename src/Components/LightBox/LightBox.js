@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import { AppContext } from '../../AppContext';
 import Product1 from '../../images/image-product-1.jpg';
 import Product1Thumbnail from '../../images/image-product-1-thumbnail.jpg';
@@ -18,25 +18,22 @@ import './LightBox.css';
 
 
 export default function Lightbox() {
-    const {quantity, setQuantity} = useContext(AppContext);
+    const {quantity, setQuantity, price, setPrice} = useContext(AppContext);
 
+    const unit = 125.00;
     let qty = quantity;
+    let totalPrice;
     
-    const [unit] = useState(125.00);
-    
-    const price = (unit, qty) => {
-        let totalPrice = "$" + unit * qty;
-        if (totalPrice === "$0.00"){
-            document.getElementById('total').innerHTML = "$125.00";
-        }
-        document.getElementById('total').innerHTML = totalPrice + ".00";
+    const calculatePrice = (unit, qty) => {
+        totalPrice = unit * qty;
+        document.getElementById('total').innerHTML = `$${totalPrice.toFixed(2)}`;
         return totalPrice;
     }
     
     const addItem = () => {
         qty++
         document.getElementById('qty').innerHTML = qty;
-        price(unit, qty);
+        calculatePrice(unit, qty);
     }
     
     const removeItem = () => {
@@ -44,10 +41,11 @@ export default function Lightbox() {
             qty--;
         }
         document.getElementById('qty').innerHTML = qty;
-        price(unit, qty);
+        calculatePrice(unit, qty);
     }
     
     const setCartQty = () => {
+        setPrice(totalPrice.toFixed(2));
         setQuantity(qty);
     }
     
@@ -153,7 +151,7 @@ export default function Lightbox() {
                 <p className="lightbox-txt-desc">These low-profile sneakers are your perfect casual wear companion. 
                 Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
                 <div className="flexItems">
-                    <span id="total" className="price">$125.00</span> <span className="price-off">50%</span>
+                    <span id="total" className="price">{`$${price}`}</span> <span className="price-off">50%</span>
                 </div>
                 <p className="price-before">$250.00</p>
 

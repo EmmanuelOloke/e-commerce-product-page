@@ -8,7 +8,7 @@ import { AppContext } from '../../AppContext';
 import React, {useContext} from 'react';
 
 export default function NavBar() {
-    const {quantity} = useContext(AppContext);
+    const {quantity, price} = useContext(AppContext);
 
     const showCart = () => {
         const filledCart = document.getElementById('filled-cart');
@@ -64,7 +64,7 @@ export default function NavBar() {
                         <img className="thumbnail" src={Product1Thumbnail} alt="Product 1 Thumbnail"/>
                         <div className="details-text">
                             <div>Fall Limited Edition Sneakers</div>
-                            <div>$125.00 x {quantity} <span className="bold">$375.00</span></div>
+                            <div>$125.00 x {quantity} <span className="bold">{`$${price}`}</span></div>
                         </div>
                         <img src={Delete} alt="Delete Button"/>
                     </div>
