@@ -54,18 +54,16 @@ export default function Lightbox() {
         setQuantity(qty);
     }
 
-    const modalImages = [Product1, Product2, Product3, Product4];
-    const [modalImage, setModalImage] = useState(modalImages[0]);
-
+    
     const switchImage = (productImage) => {
         let imgSource = document.getElementById('mainImage').src;
         imgSource = productImage;
         document.getElementById('mainImage').src = imgSource;
-
+        
         let thumbsContainer = document.getElementById('lightbox-thumbnails');
         let thumbs = thumbsContainer.getElementsByClassName('lightbox-thumbnails-img');
         let spanDiv = document.getElementById('lightbox-thumbnails').getElementsByTagName("span");
-
+        
         for (let i = 0; i < thumbs.length; i++) {
             thumbs[i].addEventListener("click", function() {
                 let current = document.getElementsByClassName("active");
@@ -82,25 +80,27 @@ export default function Lightbox() {
             });
         }
     }
-
+    
     const openLightbox = () => {
         document.getElementById("lightboxModal").style.display = "flex";
     }
-
+    
     const closeLightbox = () => {
         document.getElementById("lightboxModal").style.display = "none";
     }
-
-
+    
+    const modalImages = [Product1, Product2, Product3, Product4];
+    const [modalImage, setModalImage] = useState(modalImages[0]);
+    
     // const switchModalImage = (modalImage) => {
-    //     let modalImageSource = document.getElementById('lightboxMainImage').src;
-    //     modalImageSource = modalImage;
-    //     document.getElementById('lightboxMainImage').src = modalImageSource;
-
-    //     let modalThumbsContainer = document.getElementById('modal-lightbox-thumbnails');
-    //     let modalThumbs = modalThumbsContainer.getElementsByClassName('modal-thumbnails-img');
-    //     let thumbSpan = document.getElementById('modal-lightbox-thumbnails').getElementsByTagName('span');
-
+        //     let modalImageSource = document.getElementById('lightboxMainImage').src;
+        //     modalImageSource = modalImage;
+        //     document.getElementById('lightboxMainImage').src = modalImageSource;
+        
+        //     let modalThumbsContainer = document.getElementById('modal-lightbox-thumbnails');
+        //     let modalThumbs = modalThumbsContainer.getElementsByClassName('modal-thumbnails-img');
+        //     let thumbSpan = document.getElementById('modal-lightbox-thumbnails').getElementsByTagName('span');
+        
     //     for (let i = 0; i < modalThumbs.length; i++){
     //         modalThumbs[i].addEventListener('click', () => {
     //             let current = document.getElementsByClassName("modal-active");
@@ -118,33 +118,6 @@ export default function Lightbox() {
     //     }
     // }
 
-    const addActive = (modalImage) => {
-        let previousActive = document.getElementsByClassName(" modal-active");
-        let previousActiveDiv = document.getElementsByClassName("modal-thumbnail-div");
-
-        previousActive[0].className = previousActive[0].className.replace(" modal-active", "");
-        previousActiveDiv[0].className = previousActiveDiv[0].className.replace("modal-thumbnail-div", "");
-
-        // let newActive, newActiveDiv;
-
-        if (modalImage === modalImages[0]) {
-            document.getElementById('modal-product1').className += " modal-active";
-            document.getElementById('product1-span').className += "modal-thumbnail-div";
-        }
-        else if (modalImage === modalImages[1]) {
-            document.getElementById('modal-product2').className += " modal-active";
-            document.getElementById('product2-span').className += "modal-thumbnail-div";
-            console.log("why!!!!");
-        }
-        else if (modalImage === modalImages[2]) {
-            document.getElementById('modal-product3').className += " modal-active";
-            document.getElementById('product3-span').className += "modal-thumbnail-div";
-        }
-        else if (modalImage === modalImages[3]) {
-            document.getElementById('modal-product4').className += " modal-active";
-            document.getElementById('product4-span').className += "modal-thumbnail-div";
-        }
-    }
     
     const nextModalImage = () => {
         modalImages.indexOf(modalImage) > 2 ?
@@ -154,7 +127,7 @@ export default function Lightbox() {
     }
 
     const prevModalImage = () => {
-        modalImages.indexOf(modalImage) < 1 ?
+        modalImages.indexOf(modalImage) < 1 ? 
             setModalImage(modalImages[3])
         :
             setModalImage(modalImages[modalImages.indexOf(modalImage) - 1]);
@@ -219,20 +192,20 @@ export default function Lightbox() {
                     </div>
 
                     <div id="modal-lightbox-thumbnails" className="modal-thumbnails">
-                        <span id="product1-span" className="modal-thumbnail-div">
-                            <img className="modal-thumbnails-img modal-active" id="modal-product1" src={Product1Thumbnail} alt="product 1 thumbnail" onClick={() => {setModalImage(modalImages[0]); addActive(modalImages[0])}}/>
+                        <span id="product1-span" className={modalImages.indexOf(modalImage) === 0 ? "modal-thumbnail-div" : ''}>
+                            <img className={`modal-thumbnails-img ${modalImages.indexOf(modalImage) === 0 ? ' modal-active' : ''}`} id="modal-product1" src={Product1Thumbnail} alt="product 1 thumbnail" onClick={() => {setModalImage(modalImages[0])}}/>
                         </span>
                             
-                        <span id="product2-span">
-                            <img className="modal-thumbnails-img" id="modal-product2" src={Product2Thumbnail} alt="product 2 thumbnail" onClick={() => {setModalImage(modalImages[1]); addActive(modalImages[1])}}/>
+                        <span id="product2-span" className={modalImages.indexOf(modalImage) === 1 ? "modal-thumbnail-div" : ''}>
+                            <img className={`modal-thumbnails-img ${modalImages.indexOf(modalImage) === 1 ? ' modal-active' : ''}`} id="modal-product2" src={Product2Thumbnail} alt="product 2 thumbnail" onClick={() => {setModalImage(modalImages[1])}}/>
                         </span>
                             
-                        <span id="product3-span">
-                            <img className="modal-thumbnails-img" id="modal-product3" src={Product3Thumbnail} alt="product 3 thumbnail" onClick={() => {setModalImage(modalImages[2]); addActive(modalImages[2])}}/>
+                        <span id="product3-span" className={modalImages.indexOf(modalImage) === 2 ? "modal-thumbnail-div" : ''}>
+                            <img className={`modal-thumbnails-img ${modalImages.indexOf(modalImage) === 2 ? ' modal-active' : ''}`} id="modal-product3" src={Product3Thumbnail} alt="product 3 thumbnail" onClick={() => {setModalImage(modalImages[2])}}/>
                         </span>
                             
-                        <span id="product4-span">
-                            <img className="modal-thumbnails-img" id="modal-product4" src={Product4Thumbnail} alt="product 4 thumbnail" onClick={() => {setModalImage(modalImages[3]); addActive(modalImages[3])}}/>
+                        <span id="product4-span" className={modalImages.indexOf(modalImage) === 3 ? "modal-thumbnail-div" : ''}>
+                            <img className={`modal-thumbnails-img ${modalImages.indexOf(modalImage) === 3 ? ' modal-active' : ''}`} id="modal-product4" src={Product4Thumbnail} alt="product 4 thumbnail" onClick={() => {setModalImage(modalImages[3])}}/>
                         </span>
                     </div>
                 </div>
