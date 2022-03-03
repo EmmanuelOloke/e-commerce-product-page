@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import { AppContext } from '../../AppContext';
 import Product1 from '../../images/image-product-1.jpg';
 import Product1Thumbnail from '../../images/image-product-1-thumbnail.jpg';
@@ -88,57 +88,47 @@ export default function Lightbox() {
         document.getElementById("lightboxModal").style.display = "none";
     }
 
-    const switchModalImage = (modalImage) => {
-        let modalImageSource = document.getElementById('lightboxMainImage').src;
-        modalImageSource = modalImage;
-        document.getElementById('lightboxMainImage').src = modalImageSource;
-
-        let modalThumbsContainer = document.getElementById('modal-lightbox-thumbnails');
-        let modalThumbs = modalThumbsContainer.getElementsByClassName('modal-thumbnails-img');
-        let thumbSpan = document.getElementById('modal-lightbox-thumbnails').getElementsByTagName('span');
-
-        for (let i = 0; i < modalThumbs.length; i++){
-            modalThumbs[i].addEventListener('click', () => {
-                let current = document.getElementsByClassName("modal-active");
-                current[0].className = current[0].className.replace(" modal-active", "");
-                modalThumbs[i].className += " modal-active";
-            })
-        }
-
-        for (let i = 0; i < modalThumbs.length; i++){
-            modalThumbs[i].addEventListener('click', () => {
-                let current = document.getElementsByClassName("modal-thumbnail-div");
-                current[0].className = current[0].className.replace("modal-thumbnail-div", "");
-                thumbSpan[i].className += "modal-thumbnail-div";
-            })
-        }
-    }
-
-    let imageCount = 0;
     const modalImages = [Product1, Product2, Product3, Product4];
+    const [modalImage, setModalImage] = useState(modalImages[0]);
 
+    // const switchModalImage = (modalImage) => {
+    //     let modalImageSource = document.getElementById('lightboxMainImage').src;
+    //     modalImageSource = modalImage;
+    //     document.getElementById('lightboxMainImage').src = modalImageSource;
+
+    //     let modalThumbsContainer = document.getElementById('modal-lightbox-thumbnails');
+    //     let modalThumbs = modalThumbsContainer.getElementsByClassName('modal-thumbnails-img');
+    //     let thumbSpan = document.getElementById('modal-lightbox-thumbnails').getElementsByTagName('span');
+
+    //     for (let i = 0; i < modalThumbs.length; i++){
+    //         modalThumbs[i].addEventListener('click', () => {
+    //             let current = document.getElementsByClassName("modal-active");
+    //             current[0].className = current[0].className.replace(" modal-active", "");
+    //             modalThumbs[i].className += " modal-active";
+    //         })
+    //     }
+
+    //     for (let i = 0; i < modalThumbs.length; i++){
+    //         modalThumbs[i].addEventListener('click', () => {
+    //             let current = document.getElementsByClassName("modal-thumbnail-div");
+    //             current[0].className = current[0].className.replace("modal-thumbnail-div", "");
+    //             thumbSpan[i].className += "modal-thumbnail-div";
+    //         })
+    //     }
+    // }
+    
     const nextModalImage = () => {
-        imageCount++;
-
-        if (imageCount > 3) {
-            imageCount = 0;
-        }
-
-        let modalImage = modalImages[imageCount];
-        
-        document.getElementById('lightboxMainImage').src = modalImage;
+        modalImages.indexOf(modalImage) > 2 ?
+            setModalImage(modalImages[0])
+        :
+            setModalImage(modalImages[modalImages.indexOf(modalImage) + 1]);
     }
 
     const prevModalImage = () => {
-        imageCount--;
-
-        if (imageCount < 0) {
-            imageCount = 3;
-        }
-
-        let modalImage = modalImages[imageCount];
-
-        document.getElementById('lightboxMainImage').src = modalImage;
+        modalImages.indexOf(modalImage) < 1 ?
+            setModalImage(modalImages[3])
+        :
+            setModalImage(modalImages[modalImages.indexOf(modalImage) - 1]);
     }
 
     return (
@@ -195,25 +185,25 @@ export default function Lightbox() {
 
                     <div className="main-modal">
                         <img className="main-modal-icon prev" src={IconPrevious} alt="Previous Icon" onClick={() => prevModalImage()}/>
-                        <img id="lightboxMainImage" className="slide-images" src={Product1} alt="Main product one"/>
+                        <img id="lightboxMainImage" className="slide-images" src={modalImage} alt="Main product one"/>
                         <img className="main-modal-icon next" src={IconNext} alt="Next Icon" onClick={() => nextModalImage()}/>
                     </div>
 
                     <div id="modal-lightbox-thumbnails" className="modal-thumbnails">
                         <span className="modal-thumbnail-div">
-                            <img className="modal-thumbnails-img modal-active" id="product1" src={Product1Thumbnail} alt="product 1 thumbnail" onClick={() => switchModalImage(Product1)}/>
+                            <img className="modal-thumbnails-img modal-active" id="product1" src={Product1Thumbnail} alt="product 1 thumbnail" onClick={() => setModalImage(modalImages[0])}/>
                         </span>
                             
                         <span>
-                            <img className="modal-thumbnails-img" id="product2" src={Product2Thumbnail} alt="product 2 thumbnail" onClick={() => switchModalImage(Product2)}/>
+                            <img className="modal-thumbnails-img" id="product2" src={Product2Thumbnail} alt="product 2 thumbnail" onClick={() => setModalImage(modalImages[1])}/>
                         </span>
                             
                         <span>
-                            <img className="modal-thumbnails-img" id="product3" src={Product3Thumbnail} alt="product 3 thumbnail" onClick={() => switchModalImage(Product3)}/>
+                            <img className="modal-thumbnails-img" id="product3" src={Product3Thumbnail} alt="product 3 thumbnail" onClick={() => setModalImage(modalImages[2])}/>
                         </span>
                             
                         <span>
-                            <img className="modal-thumbnails-img" id="product4" src={Product4Thumbnail} alt="product 4 thumbnail" onClick={() => switchModalImage(Product4)}/>
+                            <img className="modal-thumbnails-img" id="product4" src={Product4Thumbnail} alt="product 4 thumbnail" onClick={() => setModalImage(modalImages[3])}/>
                         </span>
                     </div>
                 </div>
