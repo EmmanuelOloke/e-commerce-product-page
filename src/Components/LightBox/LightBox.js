@@ -53,11 +53,6 @@ export default function Lightbox() {
         setPrice(totalPrice.toFixed(2));
         setQuantity(qty);
     }
-    
-
-    // const addToCart = () => {
-    //     document.getElementById('qty').innerHTML = qty;
-    // }
 
     const switchImage = (productImage) => {
         let imgSource = document.getElementById('mainImage').src;
@@ -72,15 +67,15 @@ export default function Lightbox() {
             thumbs[i].addEventListener("click", function() {
                 let current = document.getElementsByClassName("active");
                 current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
+                thumbs[i].className += " active";
             });
         }
-
+        
         for (let i = 0; i < spanDiv.length; i++) {
             spanDiv[i].addEventListener("click", function() {
                 let currentSpan = document.getElementsByClassName("thumbnail-div");
                 currentSpan[0].className = currentSpan[0].className.replace("thumbnail-div", "");
-                this.className += "thumbnail-div";
+                spanDiv[i].className += "thumbnail-div";
             });
         }
     }
@@ -97,6 +92,26 @@ export default function Lightbox() {
         let modalImageSource = document.getElementById('lightboxMainImage').src;
         modalImageSource = modalImage;
         document.getElementById('lightboxMainImage').src = modalImageSource;
+
+        let modalThumbsContainer = document.getElementById('modal-lightbox-thumbnails');
+        let modalThumbs = modalThumbsContainer.getElementsByClassName('modal-thumbnails-img');
+        let thumbSpan = document.getElementById('modal-lightbox-thumbnails').getElementsByTagName('span');
+
+        for (let i = 0; i < modalThumbs.length; i++){
+            modalThumbs[i].addEventListener('click', () => {
+                let current = document.getElementsByClassName("modal-active");
+                current[0].className = current[0].className.replace(" modal-active", "");
+                modalThumbs[i].className += " modal-active";
+            })
+        }
+
+        for (let i = 0; i < modalThumbs.length; i++){
+            modalThumbs[i].addEventListener('click', () => {
+                let current = document.getElementsByClassName("modal-thumbnail-div");
+                current[0].className = current[0].className.replace("modal-thumbnail-div", "");
+                thumbSpan[i].className += "modal-thumbnail-div";
+            })
+        }
     }
 
     let imageCount = 0;
@@ -184,9 +199,9 @@ export default function Lightbox() {
                         <img className="main-modal-icon next" src={IconNext} alt="Next Icon" onClick={() => nextModalImage()}/>
                     </div>
 
-                    <div id="lightbox-thumbnails" className="modal-thumnails">
-                        <span className="thumbnail-div">
-                            <img className="modal-thumbnails-img active" id="product1" src={Product1Thumbnail} alt="product 1 thumbnail" onClick={() => switchModalImage(Product1)}/>
+                    <div id="modal-lightbox-thumbnails" className="modal-thumbnails">
+                        <span className="modal-thumbnail-div">
+                            <img className="modal-thumbnails-img modal-active" id="product1" src={Product1Thumbnail} alt="product 1 thumbnail" onClick={() => switchModalImage(Product1)}/>
                         </span>
                             
                         <span>

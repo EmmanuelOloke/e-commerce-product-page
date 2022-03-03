@@ -211,14 +211,30 @@ button img {
     z-index: 1;
 }
 
+#modal-lightbox-thumbnails {
+    display: flex;
+    gap: 1.7em;
+    width: 25em;
+}
+
 .modal-thumbnails-img {
     width: 5em;
     border-radius: 10px;
     transition: 0.3s;
 }
 
+.modal-active {
+    color: white;
+    opacity: 0.5;
+}
+
+.modal-thumbnail-div {
+    outline: 2px solid hsl(26, 100%, 55%);
+    border-radius: 10px;
+    height: 5em;
+}
+
 .modal-thumbnails-img:hover {
     cursor: pointer;
-    color: white;
     opacity: 0.6;
 }
