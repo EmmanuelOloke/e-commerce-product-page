@@ -59,29 +59,30 @@ export default function NavBar() {
                 <div>
                     <img className="avatar" src={Avatar} alt="Avatar"/>
                 </div>
+
+                { (quantity > 0) ? (
+                    <div id="filled-cart" className="cart-items">
+                        <p className="title bold">Cart</p>
+                        <hr style={{opacity: 0.3}}/>
+                        <div className="item-details cart-content">
+                            <img className="thumbnail" src={Product1Thumbnail} alt="Product 1 Thumbnail"/>
+                            <div className="details-text">
+                                <div>Fall Limited Edition Sneakers</div>
+                                <div>$125.00 x {quantity} <span className="bold">{`$${price}`}</span></div>
+                            </div>
+                            <img className="remove-items" src={Delete} alt="Delete Button" onClick={() => removeCartItems()}/>
+                        </div>
+                        <button className="checkout">Checkout</button>
+                    </div>
+                ) : (
+                    <div id="empty-cart" className="cart-items">
+                        <p className="title bold">Cart</p>
+                        <hr style={{opacity: 0.3}}/>
+                        <p className="empty-content">Your cart is empty.</p>
+                    </div>
+                )}
             </div>
 
-            { (quantity > 0) ? (
-                <div id="filled-cart" className="cart-items">
-                    <p className="title bold">Cart</p>
-                    <hr style={{opacity: 0.3}}/>
-                    <div className="item-details cart-content">
-                        <img className="thumbnail" src={Product1Thumbnail} alt="Product 1 Thumbnail"/>
-                        <div className="details-text">
-                            <div>Fall Limited Edition Sneakers</div>
-                            <div>$125.00 x {quantity} <span className="bold">{`$${price}`}</span></div>
-                        </div>
-                        <img className="remove-items" src={Delete} alt="Delete Button" onClick={() => removeCartItems()}/>
-                    </div>
-                    <button className="checkout">Checkout</button>
-                </div>
-            ) : (
-                <div id="empty-cart" className="cart-items">
-                    <p className="title bold">Cart</p>
-                    <hr style={{opacity: 0.3}}/>
-                    <p className="empty-content">Your cart is empty.</p>
-                </div>
-            )}
             <hr className="navbar-hr"/>
         </navbar>
     )
