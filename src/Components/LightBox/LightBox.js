@@ -54,33 +54,12 @@ export default function Lightbox() {
         setQuantity(qty);
     }
 
+    const productImages = [Product1, Product2, Product3, Product4];
+    const [productImage, setProductImage] = useState(productImages[0]);
     
-    const switchImage = (productImage) => {
-        let imgSource = document.getElementById('mainImage').src;
-        imgSource = productImage;
-        document.getElementById('mainImage').src = imgSource;
-        
-        let thumbsContainer = document.getElementById('lightbox-thumbnails');
-        let thumbs = thumbsContainer.getElementsByClassName('lightbox-thumbnails-img');
-        let spanDiv = document.getElementById('lightbox-thumbnails').getElementsByTagName("span");
-        
-        for (let i = 0; i < thumbs.length; i++) {
-            thumbs[i].addEventListener("click", function() {
-                let current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                thumbs[i].className += " active";
-            });
-        }
-        
-        for (let i = 0; i < spanDiv.length; i++) {
-            spanDiv[i].addEventListener("click", function() {
-                let currentSpan = document.getElementsByClassName("thumbnail-div");
-                currentSpan[0].className = currentSpan[0].className.replace("thumbnail-div", "");
-                spanDiv[i].className += "thumbnail-div";
-            });
-        }
-    }
-    
+    const modalImages = [Product1, Product2, Product3, Product4];
+    const [modalImage, setModalImage] = useState(modalImages[0]);
+
     const openLightbox = () => {
         document.getElementById("lightboxModal").style.display = "flex";
     }
@@ -89,35 +68,6 @@ export default function Lightbox() {
         document.getElementById("lightboxModal").style.display = "none";
     }
     
-    const modalImages = [Product1, Product2, Product3, Product4];
-    const [modalImage, setModalImage] = useState(modalImages[0]);
-    
-    // const switchModalImage = (modalImage) => {
-        //     let modalImageSource = document.getElementById('lightboxMainImage').src;
-        //     modalImageSource = modalImage;
-        //     document.getElementById('lightboxMainImage').src = modalImageSource;
-        
-        //     let modalThumbsContainer = document.getElementById('modal-lightbox-thumbnails');
-        //     let modalThumbs = modalThumbsContainer.getElementsByClassName('modal-thumbnails-img');
-        //     let thumbSpan = document.getElementById('modal-lightbox-thumbnails').getElementsByTagName('span');
-        
-    //     for (let i = 0; i < modalThumbs.length; i++){
-    //         modalThumbs[i].addEventListener('click', () => {
-    //             let current = document.getElementsByClassName("modal-active");
-    //             current[0].className = current[0].className.replace(" modal-active", "");
-    //             modalThumbs[i].className += " modal-active";
-    //         })
-    //     }
-
-    //     for (let i = 0; i < modalThumbs.length; i++){
-    //         modalThumbs[i].addEventListener('click', () => {
-    //             let current = document.getElementsByClassName("modal-thumbnail-div");
-    //             current[0].className = current[0].className.replace("modal-thumbnail-div", "");
-    //             thumbSpan[i].className += "modal-thumbnail-div";
-    //         })
-    //     }
-    // }
-
     
     const nextModalImage = () => {
         modalImages.indexOf(modalImage) > 2 ?
@@ -136,23 +86,23 @@ export default function Lightbox() {
     return (
         <main className="lightbox-container">
             <div className="lightbox-images">
-                <img id="mainImage" className="lightbox-main-image" src={Product1} alt="main product" onClick={() => openLightbox()}/>
+                <img id="mainImage" className="lightbox-main-image" src={productImage} alt="main product" onClick={() => openLightbox()}/>
 
                 <div id="lightbox-thumbnails">
-                    <span className="thumbnail-div">
-                        <img className="lightbox-thumbnails-img active" id="product1" src={Product1Thumbnail} alt="product 1 thumbnail" onClick={() => switchImage(Product1)}/>
+                    <span className={productImages.indexOf(productImage) === 0 ? "thumbnail-div" : ''}>
+                        <img className={`lightbox-thumbnails-img ${productImages.indexOf(productImage) === 0 ? ' active' : ''}`} id="product1" src={Product1Thumbnail} alt="product 1 thumbnail" onClick={() => setProductImage(productImages[0])}/>
                     </span>
                     
-                    <span>
-                        <img className="lightbox-thumbnails-img" id="product2" src={Product2Thumbnail} alt="product 2 thumbnail" onClick={() => switchImage(Product2)}/>
+                    <span className={productImages.indexOf(productImage) === 1 ? "thumbnail-div" : ''}>
+                        <img className={`lightbox-thumbnails-img ${productImages.indexOf(productImage) === 1 ? ' active' : ''}`} id="product2" src={Product2Thumbnail} alt="product 2 thumbnail" onClick={() => setProductImage(productImages[1])}/>
                     </span>
                     
-                    <span>
-                        <img className="lightbox-thumbnails-img" id="product3" src={Product3Thumbnail} alt="product 3 thumbnail" onClick={() => switchImage(Product3)}/>
+                    <span className={productImages.indexOf(productImage) === 2 ? "thumbnail-div" : ''}>
+                        <img className={`lightbox-thumbnails-img ${productImages.indexOf(productImage) === 2 ? ' active' : ''}`} id="product3" src={Product3Thumbnail} alt="product 3 thumbnail" onClick={() => setProductImage(productImages[2])}/>
                     </span>
                     
-                    <span>
-                        <img className="lightbox-thumbnails-img" id="product4" src={Product4Thumbnail} alt="product 4 thumbnail" onClick={() => switchImage(Product4)}/>
+                    <span className={productImages.indexOf(productImage) === 3 ? "thumbnail-div" : ''}>
+                        <img className={`lightbox-thumbnails-img ${productImages.indexOf(productImage) === 3 ? ' active' : ''}`} id="product4" src={Product4Thumbnail} alt="product 4 thumbnail" onClick={() => setProductImage(productImages[3])}/>
                     </span>
                 </div>
             </div>
