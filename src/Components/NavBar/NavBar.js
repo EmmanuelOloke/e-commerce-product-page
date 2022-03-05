@@ -36,7 +36,7 @@ export default function NavBar() {
         <navbar className="navbar">
             <div className="navbar-left">
                 <FontAwesomeIcon className="bar-icon" icon={faBars}/>
-                <img className="logo" src={Logo} alt="logo"/>
+                <img className="logo" src={Logo} alt="Brand Logo"/>
                 <ul>
                     <li>Collections</li>
                     <li>Men</li>
@@ -49,7 +49,7 @@ export default function NavBar() {
             <div className="navbar-right">
                 <span className="cart-icon" onClick={() => showCart()}>
                     {/* <img src={Cart} alt="Cart Icon"/> */}
-                    <FontAwesomeIcon className="" icon={faShoppingCart}/>
+                    <FontAwesomeIcon className="navbar-cart" icon={faShoppingCart} alt="Cart Icon"/>
                     { (quantity === 0) ? 
                             (
                                 <span id="badge" className="cart-badge">{quantity}</span>
