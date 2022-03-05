@@ -1,11 +1,15 @@
 import Logo from '../../images/logo.svg';
-import Cart from '../../images/icon-cart.svg';
+// import Cart from '../../images/icon-cart.svg';
 import Avatar from '../../images/image-avatar.png';
 import Product1Thumbnail from '../../images/image-product-1-thumbnail.jpg';
 import Delete from '../../images/icon-delete.svg';
 import './NavBar.css';
 import { AppContext } from '../../AppContext';
 import React, {useContext} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {} from '@fortawesome/fontawesome-svg-core';
+import {faBars, faShoppingCart} from '@fortawesome/free-solid-svg-icons';
+// import {farShoppingCart} from '@fortawesome/free-regular-svg-icons';
 
 export default function NavBar() {
     const {quantity, setQuantity, price, setPrice} = useContext(AppContext);
@@ -31,8 +35,8 @@ export default function NavBar() {
     return (
         <navbar className="navbar">
             <div className="navbar-left">
-                <img src={Logo} alt="logo"/>
-
+                <FontAwesomeIcon className="bar-icon" icon={faBars}/>
+                <img className="logo" src={Logo} alt="logo"/>
                 <ul>
                     <li>Collections</li>
                     <li>Men</li>
@@ -44,7 +48,8 @@ export default function NavBar() {
 
             <div className="navbar-right">
                 <span className="cart-icon" onClick={() => showCart()}>
-                    <img src={Cart} alt="Cart Icon"/>
+                    {/* <img src={Cart} alt="Cart Icon"/> */}
+                    <FontAwesomeIcon className="" icon={faShoppingCart}/>
                     { (quantity === 0) ? 
                             (
                                 <span id="badge" className="cart-badge">{quantity}</span>
@@ -56,9 +61,7 @@ export default function NavBar() {
                     }
                 </span>
                 
-                <div>
-                    <img className="avatar" src={Avatar} alt="Avatar"/>
-                </div>
+                <img className="avatar" src={Avatar} alt="Avatar"/>
 
                 { (quantity > 0) ? (
                     <div id="filled-cart" className="cart-items">
