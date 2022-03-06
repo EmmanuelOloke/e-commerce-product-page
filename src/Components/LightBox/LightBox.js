@@ -18,19 +18,17 @@ import './LightBox.css';
 
 
 export default function Lightbox() {
-    const {quantity, setQuantity, price, setPrice} = useContext(AppContext);
+    const {quantity, setQuantity, price} = useContext(AppContext);
 
     const unit = 125.00;
     let qty = quantity;
-    let totalPrice;
+    let totalPrice = unit;
     
     const calculatePrice = (unit, qty) => {
         if (qty === 0){
-            totalPrice = unit;
             return;
         }
         totalPrice = unit * qty;
-        document.getElementById('total').innerHTML = `$${totalPrice.toFixed(2)}`;
         return totalPrice;
     }
     
@@ -50,7 +48,7 @@ export default function Lightbox() {
     }
     
     const setCartQty = () => {
-        setPrice(totalPrice.toFixed(2));
+        // setPrice(totalPrice.toFixed(2));
         setQuantity(qty);
     }
 

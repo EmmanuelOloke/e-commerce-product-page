@@ -14,6 +14,10 @@ import {faBars, faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 export default function NavBar() {
     const {quantity, setQuantity, price, setPrice} = useContext(AppContext);
 
+    let totalPrice = 125.00 * quantity;
+
+    setPrice(totalPrice);
+
     const showCart = () => {
         const filledCart = document.getElementById('filled-cart');
         const emptyCart = document.getElementById('empty-cart');
@@ -29,7 +33,7 @@ export default function NavBar() {
 
     const removeCartItems = () => {
         setQuantity(0);
-        setPrice(125.00.toFixed(2));
+        // setPrice(125.00.toFixed(2));
     }
 
     return (
