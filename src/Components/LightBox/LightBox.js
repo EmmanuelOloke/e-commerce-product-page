@@ -18,7 +18,7 @@ import './LightBox.css';
 
 
 export default function Lightbox() {
-    const {quantity, setQuantity, price} = useContext(AppContext);
+    const {quantity, setQuantity} = useContext(AppContext);
 
     const unit = 125.00;
     let qty = quantity;
@@ -48,7 +48,6 @@ export default function Lightbox() {
     }
     
     const setCartQty = () => {
-        // setPrice(totalPrice.toFixed(2));
         setQuantity(qty);
     }
 
@@ -111,7 +110,7 @@ export default function Lightbox() {
                 <p className="lightbox-txt-desc">These low-profile sneakers are your perfect casual wear companion. 
                 Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
                 <div className="flexItems">
-                    <span id="total" className="price">{`$${price}`}</span> <span className="price-off">50%</span>
+                    <span id="total" className="price">$125.00</span> <span className="price-off">50%</span>
                 </div>
                 <p className="price-before">$250.00</p>
 

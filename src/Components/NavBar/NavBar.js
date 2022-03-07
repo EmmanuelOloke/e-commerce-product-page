@@ -16,7 +16,7 @@ export default function NavBar() {
 
     let totalPrice = 125.00 * quantity;
 
-    setPrice(totalPrice);
+    setPrice(totalPrice.toFixed(2));
 
     const showCart = () => {
         const filledCart = document.getElementById('filled-cart');
@@ -33,7 +33,6 @@ export default function NavBar() {
 
     const removeCartItems = () => {
         setQuantity(0);
-        // setPrice(125.00.toFixed(2));
     }
 
     return (
