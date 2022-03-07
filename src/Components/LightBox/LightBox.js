@@ -109,15 +109,18 @@ export default function Lightbox() {
                 <p className="lightbox-txt-fall">Fall Limited Edition Sneakers</p>
                 <p className="lightbox-txt-desc">These low-profile sneakers are your perfect casual wear companion. 
                 Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
-                <div className="flexItems">
-                    <span id="total" className="price">$125.00</span> <span className="price-off">50%</span>
+                <div className="prices">
+                    <div className="prices-flex">
+                        <span className="price">$125.00</span> 
+                        <span className="price-off">50%</span>
+                    </div>
+                    <p className="price-before">$250.00</p>
                 </div>
-                <p className="price-before">$250.00</p>
 
-                <div className="flexItems">
+                <div className="button-items">
                     <div className="item-count">
                         <img src={IconMinus} alt="remove product" onClick={removeItem}/>
-                        <span id="qty" className="item-quantity">{quantity}</span>
+                        <span id="qty">{quantity}</span>
                         <img src={IconPlus} alt="add product" onClick={addItem}/>
                     </div>
 

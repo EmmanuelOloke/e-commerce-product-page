@@ -15,14 +15,113 @@
 
 .lightbox-txt {
     display: block;
+    gap: 0.5em;
+    padding: 1.5em;
 }
 
 .lightbox-txt-title {
     color: rgb(242, 140, 40);
-    font-size: 0.8em;
+    font-size: 1em;
     font-weight: bold;
     letter-spacing: 2px;
     margin: 0;
+}
+
+.lightbox-txt-fall {
+    padding-top: 0.5em;
+    font-size: 1.7em;
+    font-weight: bold;
+    margin: 0;
+    max-width: 35em;
+}
+
+.lightbox-txt-desc {
+    color: hsl(219, 9%, 45%);
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+
+.prices {
+    display: flex;
+    flex-direction: row;
+    gap: 12em;
+    align-items: center;
+}
+
+.prices-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 5em;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.price-off {
+    margin: 1em 1em;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: rgb(242, 140, 40);
+    background-color: rgb(255, 245, 238);
+    padding: 0.25em 0.4em;
+    border-radius: 5px;
+}
+
+.price-before {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: hsl(220, 14%, 75%);
+    text-decoration: line-through;
+}
+
+.button-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 0.8em;
+}
+
+.item-count {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    background-color: hsl(223, 64%, 98%);
+    padding: 1em;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.item-quantity {
+    font-weight: bold;
+}
+
+.add-to-cart {
+    border: none;
+    box-shadow: 0 4px 8px 0 rgb(242, 140, 40);
+    transition: 0.3s;
+    width: 100%;
+    background-color: hsl(26, 100%, 55%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+    align-items: center;
+    padding: 1em;
+}
+
+.add-to-cart:hover {
+    opacity: 0.7;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+button img {
+    width: 1.1em;
+    margin-right: 1.5em;
 }
 
 #lightboxModal {
@@ -77,7 +176,6 @@
     .lightbox-txt {
         display: flex;
         flex-direction: column;
-        gap: 1em;
         width: 27%;
         margin-top: 3em;
     }
@@ -86,12 +184,12 @@
         font-size: 0.8em;
         font-weight: bold;
         letter-spacing: 2px;
-        margin: 0;
+        margin-top: -1.5em;
     }
     .lightbox-txt-fall {
+        margin-top: -0.3em;
         font-size: 2.5em;
         font-weight: bold;
-        margin: 0;
         max-width: 35em;
     }
     .lightbox-txt-desc {
@@ -99,39 +197,52 @@
         font-size: 0.9em;
         line-height: 1.5em;
     }
-    .flexItems {
+    .prices {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+    .prices-flex {
         display: flex;
         flex-direction: row;
-        gap: 1em;
+        justify-content: flex-start;
+        align-items: center;
+        max-width: 5em;
+        margin-top: -0.5em;
     }
     .price {
         font-weight: bold;
-        font-size: 1.5em;
-        width: 4em;
+        font-size: 1.7em;
     }
     .price-off {
+        margin: 1em 1em;
         font-size: 0.9em;
         font-weight: bold;
         color: rgb(242, 140, 40);
         background-color: rgb(255, 245, 238);
-        padding: 0.45em 0.6em;
+        padding: 0.25em 0.4em;
         border-radius: 5px;
         width: 2em;
     }
     .price-before {
-        margin-top: -0.8em;
+        display: block;
         font-weight: bold;
         font-size: 0.9em;
         color: hsl(220, 14%, 75%);
         text-decoration: line-through;
+        margin-top: -0em;
+    }
+    .button-items {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        margin-top: 0.8em;
     }
     .item-count {
         display: flex;
         flex-direction: row;
         gap: 2.5em;
-        flex-basis: 100px;
-        flex-grow: 0;
-        flex-shrink: 0;
         width: 7em;
         background-color: hsl(223, 64%, 98%);
         padding: 1em;
@@ -146,24 +257,18 @@
         border: none;
         box-shadow: 0 4px 8px 0 rgb(242, 140, 40);
         transition: 0.3s;
-    }
-    .add-to-cart:hover {
-        opacity: 0.7;
-        box-shadow: none;
-        cursor: pointer;
-    }
-    button img {
-        width: 1.1em;
-        margin-right: 1.5em;
-    }
-    .add-to-cart {
-        width: 20em;
         background-color: hsl(26, 100%, 55%);
         color: hsl(0, 0%, 100%);
         border-radius: 10px;
         font-weight: bold;
         font-size: 0.9em;
         align-items: center;
+        padding: 1em 0em;
+    }
+    .add-to-cart:hover {
+        opacity: 0.7;
+        box-shadow: none;
+        cursor: pointer;
     }
     .modal {
         display: none;
