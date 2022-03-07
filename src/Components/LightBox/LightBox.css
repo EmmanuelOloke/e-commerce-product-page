@@ -1,6 +1,32 @@
 .lightbox-container {
     display: flex;
     flex-direction: column;
+    width: 100vw;
+}
+
+.lightbox-main-image {
+    width: 100%;
+    height: 40vh;
+}
+
+#lightbox-thumbnails {
+    display: none;
+}
+
+.lightbox-txt {
+    display: block;
+}
+
+.lightbox-txt-title {
+    color: rgb(242, 140, 40);
+    font-size: 0.8em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+#lightboxModal {
+    display: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -21,6 +47,7 @@
     .lightbox-main-image {
         max-width: 25em;
         border-radius: 10px;
+        height: auto;
     }
     .lightbox-main-image:hover {
         cursor: pointer;
