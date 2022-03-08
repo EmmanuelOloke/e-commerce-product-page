@@ -39,6 +39,20 @@ li {
     right: 5em;
 }
 
+
+/* .cart-items {
+    display: none;
+    position: absolute;
+    background-color: #FFF;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    width: 20em;
+    height: 13.3em;
+    top: 4em;
+    left: 0em;
+    z-index: 1;
+} */
+
 .avatar {
     border-radius: 50%;
     width: 1.5em;
@@ -64,6 +78,8 @@ li {
         align-items: center;
         gap: 17em;
         padding: 0;
+        max-width: 1600px;
+        margin: 0 auto;
     }
     .navbar,
     img {
