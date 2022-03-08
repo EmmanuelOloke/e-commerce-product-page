@@ -8,12 +8,14 @@ import Product3 from '../../images/image-product-3.jpg';
 import Product3Thumbnail from '../../images/image-product-3-thumbnail.jpg';
 import Product4 from '../../images/image-product-4.jpg';
 import Product4Thumbnail from '../../images/image-product-4-thumbnail.jpg';
-import IconClose from '../../images/icon-close.svg';
 import IconMinus from '../../images/icon-minus.svg';
 import IconPlus from '../../images/icon-plus.svg';
 import IconPrevious from '../../images/icon-previous.svg';
 import IconNext from '../../images/icon-next.svg';
 import Cart from '../../images/icon-cart.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {} from '@fortawesome/fontawesome-svg-core';
+import {faXmark} from '@fortawesome/free-solid-svg-icons';
 import './LightBox.css';
 
 
@@ -133,7 +135,7 @@ export default function Lightbox() {
 
             <div id="lightboxModal" className="modal">
                 <div className="modal-content">
-                    <img className="close" src={IconClose} alt="Close Lightbox" onClick={() => closeLightbox()}/>
+                    <FontAwesomeIcon className="close" icon={faXmark} alt="Close Modal" onClick={() => closeLightbox()}/>
 
                     <div className="main-modal">
                         <img className="main-modal-icon prev" src={IconPrevious} alt="Previous Icon" onClick={() => prevModalImage()}/>

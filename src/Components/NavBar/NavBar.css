@@ -39,19 +39,9 @@ li {
     right: 5em;
 }
 
-
-/* .cart-items {
-    display: none;
-    position: absolute;
-    background-color: #FFF;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 5px;
-    width: 20em;
-    height: 13.3em;
-    top: 4em;
-    left: 0em;
-    z-index: 1;
-} */
+.show {
+    display: block;
+}
 
 .avatar {
     border-radius: 50%;
