@@ -44,7 +44,7 @@
 .prices {
     display: flex;
     flex-direction: row;
-    gap: 12em;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -85,6 +85,7 @@
 }
 
 .item-count {
+    border: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -93,6 +94,7 @@
     padding: 1em;
     border-radius: 10px;
     align-items: center;
+    font-weight: bold;
 }
 
 .item-quantity {
@@ -128,7 +130,7 @@ button img {
     display: none;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
     .lightbox-container {
         display: flex;
         flex-direction: row;

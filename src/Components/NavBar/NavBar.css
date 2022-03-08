@@ -25,6 +25,20 @@ li {
     font-size: 1.2em;
 }
 
+.cart-badge {
+    background-color: hsl(26, 100%, 55%);
+    color: #FFF;
+    text-align: center;
+    padding: 2px 5px;
+    border-radius: 20px;
+    font-size: 0.6em;
+    font-weight: bold;
+    width: 10px;
+    position: absolute;
+    top: 1.5em;
+    right: 5em;
+}
+
 .avatar {
     border-radius: 50%;
     width: 1.5em;
@@ -39,7 +53,7 @@ li {
     display: none;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
     .bar-icon {
         display: none;
     }
