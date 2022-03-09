@@ -125,7 +125,7 @@ export default function Lightbox() {
                     </div>
 
                     <button className="add-to-cart" onClick={setCartQty}>
-                        <img src={Cart} alt="cart icon" style={{color: 'red'}}/>
+                        <img src={Cart} alt="Cart Icon"/>
                         Add to cart
                     </button>
                 </div>
