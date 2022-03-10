@@ -121,14 +121,14 @@ li {
         background-color: hsl(26, 100%, 55%);
         color: #FFF;
         text-align: center;
-        padding: 2px 5px;
-        border-radius: 20px;
+        padding: 1px 5px;
+        border-radius: 8px;
         font-size: 0.6em;
         font-weight: bold;
         width: 10px;
         position: absolute;
-        top: -6px;
-        right: -8px;
+        top: -8px;
+        right: -7px;
     }
     .cart-items {
         display: none;
