@@ -36,7 +36,7 @@ export default function NavBar() {
     }
 
     return (
-        <navbar className="navbar">
+        <nav className="navbar">
             <div className="navbar-left">
                 <FontAwesomeIcon className="bar-icon" icon={faBars}/>
                 <img className="logo" src={Logo} alt="Brand Logo"/>
@@ -89,6 +89,6 @@ export default function NavBar() {
             </div>
 
             <hr className="navbar-hr"/>
-        </navbar>
+        </nav>
     )
 }
