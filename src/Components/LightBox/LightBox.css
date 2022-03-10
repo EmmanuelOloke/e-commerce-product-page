@@ -272,6 +272,18 @@ button img {
         box-shadow: none;
         cursor: pointer;
     }
+    button span {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5em;
+    }
+    .cart-icon {
+        fill: white;
+    }
+    .cart-icon:hover {
+        fill: #000;
+    }
     .modal {
         display: none;
         position: fixed;
