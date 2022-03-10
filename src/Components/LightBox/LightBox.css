@@ -121,9 +121,15 @@
     cursor: pointer;
 }
 
-button img {
-    width: 1.1em;
-    margin-right: 1.5em;
+button span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.cart-icon {
+    fill: white;
 }
 
 #lightboxModal {
