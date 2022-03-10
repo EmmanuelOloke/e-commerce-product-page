@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Front End Mentor E-Commerce-Product-Page Solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [E-Commerce-Product Page Challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+I'm transitioning back into Full-Time Web Development after a long hiatus away from the tech industry. From experience I know the fastest way to learn/relearn any skill is through consistent building and that is why I've found Front End Mentor Challenges to be the perfect fit for me at this stage in my career journey.
 
-### `npm start`
+This is the nineth challenge I'm attempting. My completion time is getting shorter so I'm definitely excited about that.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## The Challenge
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Build out the E-Commerce-Product-Page Challenge at [https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6] as close to the original designs as possible.
 
-### `npm test`
+## Links
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Solution: [https://www.frontendmentor.io/solutions/ecommerceproductpage-built-with-html-css-and-reactjs-tzltGwetj]
+- Live Site URL: [https://emmanueloloke.github.io/e-commerce-product-page/]
 
-### `npm run build`
+## My Process
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Create React App
+- Mobile first design approach
+- Structured with HTML and CSS
+- Added functionalities using the power of React useState hooks, ContextAPI etc
+- Created a GitHub repository and consistently push to it.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Built with
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- HTML5 markup.
+- CSS3 custom styling [Vanilla CSS only. NO LIBRARIES USED].
+- ReactJS.
+- FontAwesome
 
-### `npm run eject`
+## What I learned
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- I took on this project to challenge my skills and push myself to the edge, and I must say it did just that.
+- Used the project to learn ReactJS, which is the Frontend framework I've chosen to know more about because of it's high demand in the industry.
+- To really test my CSS skills, I decided not to use any UI libraries for the development of this challenge. It was difficult, but I must say it forced me to learn more and better ways to style elements.
+- Unfortunately, with my current skill level I was unable to implement some part of the design on the mobile view. I will definitely come back and update the solution at a later date.
+- This project also improved my JavaScript skills, learn React concepts like ContextAPI, useState etc.
+- Overall I'm greatful to Frontend Mentor for the wonderful platform and community that has given the opportunity to attempt challenges like this. It doesn't get more hands on than this.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Continued Development
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- I feel ready to take on more challenges, and look forward to completing and sharing more solutions.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Author
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Emmanuel Oloke.
+- Frontend Mentor - [https://www.frontendmentor.io/profile/EmmanuelOloke]
+- Twitter - [https://twitter.com/I_am_Pope]
