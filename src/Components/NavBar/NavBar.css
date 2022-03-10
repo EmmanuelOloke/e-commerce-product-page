@@ -21,8 +21,12 @@ li {
     display: none;
 }
 
-.navbar-cart {
-    font-size: 1.2em;
+.nav-svg-icon {
+    fill: #69707D;
+}
+
+.nav-svg-icon:hover {
+    fill: #000;
 }
 
 .cart-badge {
