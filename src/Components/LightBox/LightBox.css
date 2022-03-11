@@ -121,7 +121,7 @@
     cursor: pointer;
 }
 
-button span {
+.add-to-cart span {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -129,7 +129,7 @@ button span {
 }
 
 .cart-icon {
-    fill: white;
+    fill: #fff;
 }
 
 #lightboxModal {
@@ -278,14 +278,14 @@ button span {
         box-shadow: none;
         cursor: pointer;
     }
-    button span {
+    .add-to-cart span {
         display: flex;
         flex-direction: row;
         justify-content: center;
         gap: 0.5em;
     }
     .cart-icon {
-        fill: white;
+        fill: #fff;
     }
     .modal {
         display: none;
